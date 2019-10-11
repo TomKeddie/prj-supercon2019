@@ -1,0 +1,900 @@
+EESchema Schematic File Version 4
+LIBS:cartridge-cache
+EELAYER 30 0
+EELAYER END
+$Descr A4 11693 8268
+encoding utf-8
+Sheet 1 1
+Title "Supercon 2019 Badge Cartridge Template"
+Date ""
+Rev ""
+Comp "Template designed by: @thomasflummer"
+Comment1 "License: CC-BY-SA"
+Comment2 ""
+Comment3 ""
+Comment4 ""
+$EndDescr
+$Comp
+L cartridge-rescue:Conn_01x40_Male-Connector J1
+U 1 1 5D9B779E
+P 1100 3000
+F 0 "J1" H 1208 5081 50  0000 C CNN
+F 1 "Cartridge Connector" H 1208 4990 50  0000 C CNN
+F 2 "SuperconCartridge:Supercon_Cartridge_40pin_Connector" H 1100 3000 50  0001 C CNN
+F 3 "~" H 1100 3000 50  0001 C CNN
+	1    1100 3000
+	1    0    0    -1  
+$EndComp
+$Comp
+L cartridge-rescue:GND-power #PWR01
+U 1 1 5D9C2B6C
+P 1300 1100
+F 0 "#PWR01" H 1300 850 50  0001 C CNN
+F 1 "GND" V 1305 972 50  0000 R CNN
+F 2 "" H 1300 1100 50  0001 C CNN
+F 3 "" H 1300 1100 50  0001 C CNN
+	1    1300 1100
+	0    -1   -1   0   
+$EndComp
+$Comp
+L cartridge-rescue:+3V3-power #PWR02
+U 1 1 5D9C3D7F
+P 1300 1200
+F 0 "#PWR02" H 1300 1050 50  0001 C CNN
+F 1 "+3V3" V 1315 1328 50  0000 L CNN
+F 2 "" H 1300 1200 50  0001 C CNN
+F 3 "" H 1300 1200 50  0001 C CNN
+	1    1300 1200
+	0    1    1    0   
+$EndComp
+Text GLabel 1300 1300 2    50   Input ~ 0
+F_HOLD
+Text GLabel 1300 1400 2    50   Input ~ 0
+F_CS
+Text GLabel 1300 1500 2    50   Input ~ 0
+F_SCK
+Text GLabel 1300 1600 2    50   Input ~ 0
+F_MISO
+Text GLabel 1300 1700 2    50   Input ~ 0
+F_MOSI
+Text GLabel 1300 1800 2    50   Input ~ 0
+F_WP
+$Comp
+L cartridge-rescue:+5V-power #PWR05
+U 1 1 5D9C7C1B
+P 1300 4900
+F 0 "#PWR05" H 1300 4750 50  0001 C CNN
+F 1 "+5V" V 1315 5028 50  0000 L CNN
+F 2 "" H 1300 4900 50  0001 C CNN
+F 3 "" H 1300 4900 50  0001 C CNN
+	1    1300 4900
+	0    1    1    0   
+$EndComp
+Text GLabel 1300 1900 2    50   Input ~ 0
+GENIO1_PL11D_N
+Text GLabel 1300 2000 2    50   Input ~ 0
+GENIO2_PL11C_P
+Text GLabel 1300 2100 2    50   Input ~ 0
+GENIO3_PL11B
+Text GLabel 1300 2200 2    50   Input ~ 0
+GENIO4_PT11A_P
+Text GLabel 1300 2300 2    50   Input ~ 0
+GENIO5_PT4B_N
+Text GLabel 1300 2400 2    50   Input ~ 0
+GENIO6_PT4A_P
+Text GLabel 1300 2500 2    50   Input ~ 0
+GENIO7_PT6B
+Text GLabel 1300 2600 2    50   Input ~ 0
+GENIO8_PT11B_N
+Text GLabel 1300 2700 2    50   Input ~ 0
+GENIO9_PT18A_P
+Text GLabel 1300 2800 2    50   Input ~ 0
+GENIO10_PT15A_P
+Text GLabel 1300 2900 2    50   Input ~ 0
+GENIO11_PT15B_N
+Text GLabel 1300 3000 2    50   Input ~ 0
+GENIO12_PT18B_N
+Text GLabel 1300 3200 2    50   Input ~ 0
+GENIO14_PT27A
+Text GLabel 1300 3300 2    50   Input ~ 0
+GENIO15_PT31A_P
+Text GLabel 1300 3400 2    50   Input ~ 0
+GENIO16_PT33A
+Text GLabel 1300 3500 2    50   Input ~ 0
+GENIO17_PT29A
+Text GLabel 1300 3600 2    50   Input ~ 0
+GENIO18_PT31B_N
+Text GLabel 1300 3700 2    50   Input ~ 0
+GENIO19_PT33B
+Text GLabel 1300 3800 2    50   Input ~ 0
+GENIO20_PT36A_P
+Text GLabel 1300 3900 2    50   Input ~ 0
+GENIO21_PT42A
+Text GLabel 1300 4000 2    50   Input ~ 0
+GENIO22_PT38B_N
+Text GLabel 1300 4100 2    50   Input ~ 0
+GENIO23_PT38A_P
+Text GLabel 1300 4200 2    50   Input ~ 0
+GENIO24_PT36B_N
+Text GLabel 1300 4300 2    50   Input ~ 0
+GENIO25_PR17B
+Text GLabel 1300 4400 2    50   Input ~ 0
+GENIO26_PR20B
+Text GLabel 1300 4500 2    50   Input ~ 0
+GENIO27_PT44A
+Text GLabel 1300 4600 2    50   Input ~ 0
+GENIO28_PT49A
+Text GLabel 1300 4700 2    50   Input ~ 0
+GENIO29_PR14B
+Text GLabel 1300 4800 2    50   Input ~ 0
+GENIO30_PT56B
+$Comp
+L tom-semiconductors:W25Q128 U1
+U 1 1 5D9CC1B6
+P 3350 1350
+F 0 "U1" H 3350 1765 50  0000 C CNN
+F 1 "W25Q128" H 3350 1674 50  0000 C CNN
+F 2 "tom-semiconductors:SOIC-8_5.23x5.23mm_P1.27mm" H 3650 1450 50  0001 C CNN
+F 3 "" H 3650 1450 50  0001 C CNN
+	1    3350 1350
+	1    0    0    -1  
+$EndComp
+$Comp
+L cartridge-rescue:GND-power #PWR04
+U 1 1 5D9CD8D7
+P 2700 1500
+F 0 "#PWR04" H 2700 1250 50  0001 C CNN
+F 1 "GND" V 2705 1372 50  0000 R CNN
+F 2 "" H 2700 1500 50  0001 C CNN
+F 3 "" H 2700 1500 50  0001 C CNN
+	1    2700 1500
+	0    1    1    0   
+$EndComp
+$Comp
+L cartridge-rescue:+3V3-power #PWR03
+U 1 1 5D9CE167
+P 4000 1200
+F 0 "#PWR03" H 4000 1050 50  0001 C CNN
+F 1 "+3V3" V 4015 1328 50  0000 L CNN
+F 2 "" H 4000 1200 50  0001 C CNN
+F 3 "" H 4000 1200 50  0001 C CNN
+	1    4000 1200
+	0    1    1    0   
+$EndComp
+Text GLabel 4000 1300 2    50   Input ~ 0
+F_HOLD
+Text GLabel 2700 1200 0    50   Input ~ 0
+F_CS
+Text GLabel 2700 1400 0    50   Input ~ 0
+F_WP
+Text GLabel 2700 1300 0    50   Input ~ 0
+F_MISO
+Text GLabel 4000 1500 2    50   Input ~ 0
+F_MOSI
+Text GLabel 4000 1400 2    50   Input ~ 0
+F_SCK
+$Comp
+L cartridge-rescue:C-device C1
+U 1 1 5D9D09A7
+P 2000 1350
+F 0 "C1" H 2115 1396 50  0000 L CNN
+F 1 "100nF" H 2115 1305 50  0000 L CNN
+F 2 "tom-passives:C_0805_2012Metric_Pad1.15x1.40mm_HandSolder" H 2038 1200 50  0001 C CNN
+F 3 "~" H 2000 1350 50  0001 C CNN
+	1    2000 1350
+	1    0    0    -1  
+$EndComp
+$Comp
+L cartridge-rescue:+3V3-power #PWR07
+U 1 1 5D9D1A8B
+P 2000 1150
+F 0 "#PWR07" H 2000 1000 50  0001 C CNN
+F 1 "+3V3" H 2015 1323 50  0000 C CNN
+F 2 "" H 2000 1150 50  0001 C CNN
+F 3 "" H 2000 1150 50  0001 C CNN
+	1    2000 1150
+	1    0    0    -1  
+$EndComp
+$Comp
+L cartridge-rescue:GND-power #PWR08
+U 1 1 5D9D279F
+P 2000 1550
+F 0 "#PWR08" H 2000 1300 50  0001 C CNN
+F 1 "GND" V 2005 1422 50  0000 R CNN
+F 2 "" H 2000 1550 50  0001 C CNN
+F 3 "" H 2000 1550 50  0001 C CNN
+	1    2000 1550
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	2000 1150 2000 1200
+Wire Wire Line
+	2000 1500 2000 1550
+$Comp
+L tom-passives:C C2
+U 1 1 5D9ED09D
+P 1650 6350
+F 0 "C2" H 1765 6388 40  0000 L CNN
+F 1 "10uF" H 1765 6312 40  0000 L CNN
+F 2 "tom-passives:C_0805_2012Metric_Pad1.15x1.40mm_HandSolder" H 1688 6200 30  0001 C CNN
+F 3 "" H 1650 6350 60  0000 C CNN
+	1    1650 6350
+	1    0    0    -1  
+$EndComp
+$Comp
+L cartridge-rescue:+3V3-power #PWR0105
+U 1 1 5D9EE6D8
+P 1650 6150
+F 0 "#PWR0105" H 1650 6000 50  0001 C CNN
+F 1 "+3V3" H 1665 6323 50  0000 C CNN
+F 2 "" H 1650 6150 50  0001 C CNN
+F 3 "" H 1650 6150 50  0001 C CNN
+	1    1650 6150
+	1    0    0    -1  
+$EndComp
+$Comp
+L cartridge-rescue:GND-power #PWR0106
+U 1 1 5D9F044E
+P 1650 6550
+F 0 "#PWR0106" H 1650 6300 50  0001 C CNN
+F 1 "GND" V 1655 6422 50  0000 R CNN
+F 2 "" H 1650 6550 50  0001 C CNN
+F 3 "" H 1650 6550 50  0001 C CNN
+	1    1650 6550
+	1    0    0    -1  
+$EndComp
+Text GLabel 2800 3750 0    50   Input ~ 0
+GENIO17_PT29A
+Text GLabel 2800 3650 0    50   Input ~ 0
+GENIO16_PT33A
+Text GLabel 2800 3550 0    50   Input ~ 0
+GENIO14_PT27A
+Text GLabel 2800 3350 0    50   Input ~ 0
+GENIO13_PT20A
+Text GLabel 4500 3150 2    50   Input ~ 0
+GENIO19_PT33B
+Text GLabel 4500 3250 2    50   Input ~ 0
+GENIO21_PT42A
+Text GLabel 4500 3350 2    50   Input ~ 0
+GENIO25_PR17B
+Text GLabel 4500 3450 2    50   Input ~ 0
+GENIO26_PR20B
+Text GLabel 4500 3550 2    50   Input ~ 0
+GENIO27_PT44A
+Text GLabel 4500 3650 2    50   Input ~ 0
+GENIO28_PT49A
+Text GLabel 4500 3750 2    50   Input ~ 0
+GENIO29_PR14B
+Text GLabel 4500 3850 2    50   Input ~ 0
+GENIO30_PT56B
+Wire Wire Line
+	4250 3950 4500 3950
+Wire Wire Line
+	4250 3850 4500 3850
+Wire Wire Line
+	4250 3750 4500 3750
+Wire Wire Line
+	4250 3650 4500 3650
+Wire Wire Line
+	4250 3550 4500 3550
+Wire Wire Line
+	4250 3450 4500 3450
+Wire Wire Line
+	4250 3350 4500 3350
+Wire Wire Line
+	4250 3250 4500 3250
+Wire Wire Line
+	4250 3150 4500 3150
+Wire Wire Line
+	3050 3750 2800 3750
+Wire Wire Line
+	3050 3650 2800 3650
+Wire Wire Line
+	3050 3550 2800 3550
+Wire Wire Line
+	3050 3350 2800 3350
+NoConn ~ 3050 3850
+NoConn ~ 3050 3950
+$Comp
+L cartridge-rescue:GND-power #PWR0104
+U 1 1 5D9EA702
+P 3250 2250
+F 0 "#PWR0104" H 3250 2000 50  0001 C CNN
+F 1 "GND" V 3255 2122 50  0000 R CNN
+F 2 "" H 3250 2250 50  0001 C CNN
+F 3 "" H 3250 2250 50  0001 C CNN
+	1    3250 2250
+	1    0    0    -1  
+$EndComp
+$Comp
+L cartridge-rescue:+3V3-power #PWR0103
+U 1 1 5D9E9DBE
+P 3250 1950
+F 0 "#PWR0103" H 3250 1800 50  0001 C CNN
+F 1 "+3V3" H 3265 2123 50  0000 C CNN
+F 2 "" H 3250 1950 50  0001 C CNN
+F 3 "" H 3250 1950 50  0001 C CNN
+	1    3250 1950
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	3250 2250 2800 2250
+Connection ~ 3250 2250
+Wire Wire Line
+	3700 2250 3250 2250
+Wire Wire Line
+	3250 1950 2800 1950
+Connection ~ 3250 1950
+Wire Wire Line
+	3700 1950 3250 1950
+$Comp
+L cartridge-rescue:C-device C5
+U 1 1 5D9E9652
+P 3700 2100
+F 0 "C5" H 3815 2146 50  0000 L CNN
+F 1 "100nF" H 3815 2055 50  0000 L CNN
+F 2 "tom-passives:C_0805_2012Metric_Pad1.15x1.40mm_HandSolder" H 3738 1950 50  0001 C CNN
+F 3 "~" H 3700 2100 50  0001 C CNN
+	1    3700 2100
+	1    0    0    -1  
+$EndComp
+$Comp
+L cartridge-rescue:C-device C4
+U 1 1 5D9E9301
+P 3250 2100
+F 0 "C4" H 3365 2146 50  0000 L CNN
+F 1 "100nF" H 3365 2055 50  0000 L CNN
+F 2 "tom-passives:C_0805_2012Metric_Pad1.15x1.40mm_HandSolder" H 3288 1950 50  0001 C CNN
+F 3 "~" H 3250 2100 50  0001 C CNN
+	1    3250 2100
+	1    0    0    -1  
+$EndComp
+$Comp
+L cartridge-rescue:C-device C3
+U 1 1 5D9E7ACC
+P 2800 2100
+F 0 "C3" H 2915 2146 50  0000 L CNN
+F 1 "100nF" H 2915 2055 50  0000 L CNN
+F 2 "tom-passives:C_0805_2012Metric_Pad1.15x1.40mm_HandSolder" H 2838 1950 50  0001 C CNN
+F 3 "~" H 2800 2100 50  0001 C CNN
+	1    2800 2100
+	1    0    0    -1  
+$EndComp
+NoConn ~ 4250 4150
+NoConn ~ 4250 4250
+NoConn ~ 4250 4350
+Wire Wire Line
+	2950 4350 2950 4500
+Connection ~ 2950 4350
+Wire Wire Line
+	3050 4350 2950 4350
+Wire Wire Line
+	2950 4250 2950 4350
+Connection ~ 2950 4250
+Wire Wire Line
+	3050 4250 2950 4250
+Wire Wire Line
+	2950 4150 2950 4250
+Wire Wire Line
+	3050 4150 2950 4150
+$Comp
+L cartridge-rescue:GND-power #PWR0102
+U 1 1 5D9E5D3F
+P 2950 4500
+F 0 "#PWR0102" H 2950 4250 50  0001 C CNN
+F 1 "GND" V 2955 4372 50  0000 R CNN
+F 2 "" H 2950 4500 50  0001 C CNN
+F 3 "" H 2950 4500 50  0001 C CNN
+	1    2950 4500
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	2950 2950 2950 2800
+Connection ~ 2950 2950
+Wire Wire Line
+	3050 2950 2950 2950
+Wire Wire Line
+	2950 3050 2950 2950
+Connection ~ 2950 3050
+Wire Wire Line
+	3050 3050 2950 3050
+Wire Wire Line
+	2950 3150 2950 3050
+Wire Wire Line
+	3050 3150 2950 3150
+$Comp
+L cartridge-rescue:+3V3-power #PWR0101
+U 1 1 5D9E437A
+P 2950 2800
+F 0 "#PWR0101" H 2950 2650 50  0001 C CNN
+F 1 "+3V3" H 2965 2973 50  0000 C CNN
+F 2 "" H 2950 2800 50  0001 C CNN
+F 3 "" H 2950 2800 50  0001 C CNN
+	1    2950 2800
+	1    0    0    -1  
+$EndComp
+$Comp
+L tom-semiconductors:S70KL1281-pkl_memory U2
+U 1 1 5D9E2CF0
+P 3650 3650
+F 0 "U2" H 3650 4575 50  0000 C CNN
+F 1 "S70KL1281-pkl_memory" H 3650 4484 50  0000 C CNN
+F 2 "tom-semiconductors:BGA-24_5x5_6.0x8.0mm" H 4250 2750 50  0001 C CNN
+F 3 "http://www.cypress.com/file/183506/download" H 3650 2750 50  0001 C CNN
+F 4 "ANY" H 3650 3650 50  0001 C CNN "Source"
+	1    3650 3650
+	1    0    0    -1  
+$EndComp
+$Comp
+L tom-connectors:PMOD-2x6-FEMALE PMOD2
+U 1 1 5DA76A95
+P 6900 1750
+F 0 "PMOD2" H 6622 1771 50  0000 R CNN
+F 1 "PMOD-2x6-FEMALE" H 6622 1680 50  0000 R CNN
+F 2 "tom-connectors:PMOD_2X6_PTH_RA_SOCKET" H 6900 1750 50  0001 C CNN
+F 3 "" H 6900 1750 50  0001 C CNN
+	1    6900 1750
+	-1   0    0    -1  
+$EndComp
+$Comp
+L tom-connectors:PMOD-2x6-FEMALE PMOD3
+U 1 1 5DA771E7
+P 6900 3500
+F 0 "PMOD3" H 6622 3521 50  0000 R CNN
+F 1 "PMOD-2x6-FEMALE" H 6622 3430 50  0000 R CNN
+F 2 "tom-connectors:PMOD_2X6_PTH_RA_SOCKET" H 6900 3500 50  0001 C CNN
+F 3 "" H 6900 3500 50  0001 C CNN
+	1    6900 3500
+	-1   0    0    -1  
+$EndComp
+$Comp
+L tom-passives:C C6
+U 1 1 5DA90FEE
+P 2150 6350
+F 0 "C6" H 2265 6388 40  0000 L CNN
+F 1 "10uF" H 2265 6312 40  0000 L CNN
+F 2 "tom-passives:C_0805_2012Metric_Pad1.15x1.40mm_HandSolder" H 2188 6200 30  0001 C CNN
+F 3 "" H 2150 6350 60  0000 C CNN
+	1    2150 6350
+	1    0    0    -1  
+$EndComp
+$Comp
+L cartridge-rescue:+3V3-power #PWR09
+U 1 1 5DA90FF8
+P 2150 6150
+F 0 "#PWR09" H 2150 6000 50  0001 C CNN
+F 1 "+3V3" H 2165 6323 50  0000 C CNN
+F 2 "" H 2150 6150 50  0001 C CNN
+F 3 "" H 2150 6150 50  0001 C CNN
+	1    2150 6150
+	1    0    0    -1  
+$EndComp
+$Comp
+L cartridge-rescue:GND-power #PWR010
+U 1 1 5DA91002
+P 2150 6550
+F 0 "#PWR010" H 2150 6300 50  0001 C CNN
+F 1 "GND" V 2155 6422 50  0000 R CNN
+F 2 "" H 2150 6550 50  0001 C CNN
+F 3 "" H 2150 6550 50  0001 C CNN
+	1    2150 6550
+	1    0    0    -1  
+$EndComp
+$Comp
+L tom-passives:C C7
+U 1 1 5DA9769B
+P 2650 6350
+F 0 "C7" H 2765 6388 40  0000 L CNN
+F 1 "10uF" H 2765 6312 40  0000 L CNN
+F 2 "tom-passives:C_0805_2012Metric_Pad1.15x1.40mm_HandSolder" H 2688 6200 30  0001 C CNN
+F 3 "" H 2650 6350 60  0000 C CNN
+	1    2650 6350
+	1    0    0    -1  
+$EndComp
+$Comp
+L cartridge-rescue:+3V3-power #PWR011
+U 1 1 5DA976A5
+P 2650 6150
+F 0 "#PWR011" H 2650 6000 50  0001 C CNN
+F 1 "+3V3" H 2665 6323 50  0000 C CNN
+F 2 "" H 2650 6150 50  0001 C CNN
+F 3 "" H 2650 6150 50  0001 C CNN
+	1    2650 6150
+	1    0    0    -1  
+$EndComp
+$Comp
+L cartridge-rescue:GND-power #PWR012
+U 1 1 5DA976AF
+P 2650 6550
+F 0 "#PWR012" H 2650 6300 50  0001 C CNN
+F 1 "GND" V 2655 6422 50  0000 R CNN
+F 2 "" H 2650 6550 50  0001 C CNN
+F 3 "" H 2650 6550 50  0001 C CNN
+	1    2650 6550
+	1    0    0    -1  
+$EndComp
+$Comp
+L cartridge-rescue:GND-power #PWR018
+U 1 1 5DA9DABE
+P 7050 2350
+F 0 "#PWR018" H 7050 2100 50  0001 C CNN
+F 1 "GND" V 7055 2222 50  0000 R CNN
+F 2 "" H 7050 2350 50  0001 C CNN
+F 3 "" H 7050 2350 50  0001 C CNN
+	1    7050 2350
+	1    0    0    -1  
+$EndComp
+$Comp
+L cartridge-rescue:GND-power #PWR020
+U 1 1 5DA9E128
+P 7050 4100
+F 0 "#PWR020" H 7050 3850 50  0001 C CNN
+F 1 "GND" V 7055 3972 50  0000 R CNN
+F 2 "" H 7050 4100 50  0001 C CNN
+F 3 "" H 7050 4100 50  0001 C CNN
+	1    7050 4100
+	1    0    0    -1  
+$EndComp
+$Comp
+L cartridge-rescue:+3V3-power #PWR019
+U 1 1 5DA9F066
+P 7050 2950
+F 0 "#PWR019" H 7050 2800 50  0001 C CNN
+F 1 "+3V3" H 7065 3123 50  0000 C CNN
+F 2 "" H 7050 2950 50  0001 C CNN
+F 3 "" H 7050 2950 50  0001 C CNN
+	1    7050 2950
+	1    0    0    -1  
+$EndComp
+$Comp
+L cartridge-rescue:+3V3-power #PWR017
+U 1 1 5DA9F882
+P 7050 1200
+F 0 "#PWR017" H 7050 1050 50  0001 C CNN
+F 1 "+3V3" H 7065 1373 50  0000 C CNN
+F 2 "" H 7050 1200 50  0001 C CNN
+F 3 "" H 7050 1200 50  0001 C CNN
+	1    7050 1200
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	6950 1200 7050 1200
+Connection ~ 7050 1200
+Wire Wire Line
+	6950 2350 7050 2350
+Connection ~ 7050 2350
+Wire Wire Line
+	6600 1400 6400 1400
+Wire Wire Line
+	6600 2100 6400 2100
+Wire Wire Line
+	6600 3150 6350 3150
+Wire Wire Line
+	6350 3250 6600 3250
+Wire Wire Line
+	6600 3350 6350 3350
+Wire Wire Line
+	6350 3450 6600 3450
+Wire Wire Line
+	6600 3550 6350 3550
+Wire Wire Line
+	6350 3650 6600 3650
+Wire Wire Line
+	6600 3750 6350 3750
+Wire Wire Line
+	6350 3850 6600 3850
+Wire Wire Line
+	6950 2950 7050 2950
+Connection ~ 7050 2950
+Wire Wire Line
+	6600 2000 6400 2000
+Wire Wire Line
+	6600 1900 6400 1900
+Wire Wire Line
+	6600 1800 6400 1800
+Wire Wire Line
+	6600 1700 6400 1700
+Wire Wire Line
+	6600 1600 6400 1600
+Wire Wire Line
+	6600 1500 6400 1500
+Text GLabel 6400 1400 0    50   Input ~ 0
+GENIO6_PT4A_P
+Text GLabel 6400 1500 0    50   Input ~ 0
+GENIO5_PT4B_N
+Text GLabel 6400 2000 0    50   Input ~ 0
+GENIO10_PT15A_P
+Text GLabel 6400 2100 0    50   Input ~ 0
+GENIO11_PT15B_N
+Text GLabel 6400 1800 0    50   Input ~ 0
+GENIO23_PT38A_P
+Text GLabel 6400 1900 0    50   Input ~ 0
+GENIO22_PT38B_N
+Text GLabel 6400 1700 0    50   Input ~ 0
+GENIO1_PL11D_N
+Text GLabel 6400 1600 0    50   Input ~ 0
+GENIO2_PL11C_P
+Text GLabel 6350 3150 0    50   Input ~ 0
+GENIO4_PT11A_P
+Text GLabel 6350 3250 0    50   Input ~ 0
+GENIO8_PT11B_N
+Text GLabel 6350 3350 0    50   Input ~ 0
+GENIO9_PT18A_P
+Text GLabel 6350 3450 0    50   Input ~ 0
+GENIO12_PT18B_N
+Text GLabel 6350 3550 0    50   Input ~ 0
+GENIO15_PT31A_P
+Text GLabel 6350 3650 0    50   Input ~ 0
+GENIO18_PT31B_N
+Text GLabel 6350 3750 0    50   Input ~ 0
+GENIO20_PT36A_P
+Text GLabel 6350 3850 0    50   Input ~ 0
+GENIO24_PT36B_N
+Text GLabel 1300 3100 2    50   Input ~ 0
+GENIO13_PT20A
+$Comp
+L tom-semiconductors:APA102 D1
+U 1 1 5DB10B12
+P 3800 5250
+F 0 "D1" H 3900 4900 50  0000 C CNN
+F 1 "APA102" H 4000 5000 50  0000 C CNN
+F 2 "tom-semiconductors:LED_RGB_PLCC-6" H 3850 4950 50  0001 L TNN
+F 3 "http://www.led-color.com/upload/201506/APA102%20LED.pdf" H 3900 4875 50  0001 L TNN
+	1    3800 5250
+	1    0    0    -1  
+$EndComp
+Text GLabel 3500 5250 0    50   Input ~ 0
+GENIO7_PT6B
+Text GLabel 4500 3950 2    50   Input ~ 0
+GENIO3_PL11B
+$Comp
+L tom-passives:C C8
+U 1 1 5DB1BB8E
+P 4350 6800
+F 0 "C8" H 4465 6838 40  0000 L CNN
+F 1 "10uF" H 4465 6762 40  0000 L CNN
+F 2 "tom-passives:C_0805_2012Metric_Pad1.15x1.40mm_HandSolder" H 4388 6650 30  0001 C CNN
+F 3 "" H 4350 6800 60  0000 C CNN
+	1    4350 6800
+	1    0    0    -1  
+$EndComp
+$Comp
+L cartridge-rescue:+5V-power #PWR013
+U 1 1 5DB20BEF
+P 4350 6600
+F 0 "#PWR013" H 4350 6450 50  0001 C CNN
+F 1 "+5V" V 4365 6728 50  0000 L CNN
+F 2 "" H 4350 6600 50  0001 C CNN
+F 3 "" H 4350 6600 50  0001 C CNN
+	1    4350 6600
+	1    0    0    -1  
+$EndComp
+$Comp
+L cartridge-rescue:+5V-power #PWR015
+U 1 1 5DB21EE7
+P 3800 4950
+F 0 "#PWR015" H 3800 4800 50  0001 C CNN
+F 1 "+5V" V 3815 5078 50  0000 L CNN
+F 2 "" H 3800 4950 50  0001 C CNN
+F 3 "" H 3800 4950 50  0001 C CNN
+	1    3800 4950
+	1    0    0    -1  
+$EndComp
+$Comp
+L cartridge-rescue:GND-power #PWR016
+U 1 1 5DB25909
+P 3800 5550
+F 0 "#PWR016" H 3800 5300 50  0001 C CNN
+F 1 "GND" V 3805 5422 50  0000 R CNN
+F 2 "" H 3800 5550 50  0001 C CNN
+F 3 "" H 3800 5550 50  0001 C CNN
+	1    3800 5550
+	1    0    0    -1  
+$EndComp
+$Comp
+L cartridge-rescue:C-device C9
+U 1 1 5DB26E94
+P 4800 6800
+F 0 "C9" H 4915 6846 50  0000 L CNN
+F 1 "100nF" H 4915 6755 50  0000 L CNN
+F 2 "tom-passives:C_0805_2012Metric_Pad1.15x1.40mm_HandSolder" H 4838 6650 50  0001 C CNN
+F 3 "~" H 4800 6800 50  0001 C CNN
+	1    4800 6800
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	4350 6600 4800 6600
+Wire Wire Line
+	4800 6600 4800 6650
+Connection ~ 4350 6600
+Wire Wire Line
+	6950 4100 7050 4100
+Connection ~ 7050 4100
+NoConn ~ 4100 5150
+NoConn ~ 4100 5250
+NoConn ~ 1300 5000
+Text Notes 1400 5050 0    50   ~ 0
+BATT
+$Comp
+L tom-connectors:PMOD-2x6-FEMALE PMOD4
+U 1 1 5DB5CE78
+P 6900 5200
+F 0 "PMOD4" H 6622 5221 50  0000 R CNN
+F 1 "PMOD-2x6-FEMALE" H 6622 5130 50  0000 R CNN
+F 2 "tom-connectors:PMOD_2X6_PTH_RA_SOCKET" H 6900 5200 50  0001 C CNN
+F 3 "" H 6900 5200 50  0001 C CNN
+	1    6900 5200
+	-1   0    0    -1  
+$EndComp
+$Comp
+L cartridge-rescue:+3V3-power #PWR0107
+U 1 1 5DB5DADB
+P 7050 4650
+F 0 "#PWR0107" H 7050 4500 50  0001 C CNN
+F 1 "+3V3" H 7065 4823 50  0000 C CNN
+F 2 "" H 7050 4650 50  0001 C CNN
+F 3 "" H 7050 4650 50  0001 C CNN
+	1    7050 4650
+	1    0    0    -1  
+$EndComp
+$Comp
+L cartridge-rescue:GND-power #PWR0108
+U 1 1 5DB5DEC7
+P 7050 5800
+F 0 "#PWR0108" H 7050 5550 50  0001 C CNN
+F 1 "GND" V 7055 5672 50  0000 R CNN
+F 2 "" H 7050 5800 50  0001 C CNN
+F 3 "" H 7050 5800 50  0001 C CNN
+	1    7050 5800
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	6950 5800 7050 5800
+Connection ~ 7050 5800
+Wire Wire Line
+	6950 4650 7050 4650
+Connection ~ 7050 4650
+$Comp
+L tom-passives:C C10
+U 1 1 5DB66963
+P 1150 6350
+F 0 "C10" H 1265 6388 40  0000 L CNN
+F 1 "10uF" H 1265 6312 40  0000 L CNN
+F 2 "tom-passives:C_0805_2012Metric_Pad1.15x1.40mm_HandSolder" H 1188 6200 30  0001 C CNN
+F 3 "" H 1150 6350 60  0000 C CNN
+	1    1150 6350
+	1    0    0    -1  
+$EndComp
+$Comp
+L cartridge-rescue:+3V3-power #PWR0109
+U 1 1 5DB6696D
+P 1150 6150
+F 0 "#PWR0109" H 1150 6000 50  0001 C CNN
+F 1 "+3V3" H 1165 6323 50  0000 C CNN
+F 2 "" H 1150 6150 50  0001 C CNN
+F 3 "" H 1150 6150 50  0001 C CNN
+	1    1150 6150
+	1    0    0    -1  
+$EndComp
+$Comp
+L cartridge-rescue:GND-power #PWR0110
+U 1 1 5DB66977
+P 1150 6550
+F 0 "#PWR0110" H 1150 6300 50  0001 C CNN
+F 1 "GND" V 1155 6422 50  0000 R CNN
+F 2 "" H 1150 6550 50  0001 C CNN
+F 3 "" H 1150 6550 50  0001 C CNN
+	1    1150 6550
+	1    0    0    -1  
+$EndComp
+Text GLabel 6350 4850 0    50   Input ~ 0
+GENIO30_PT56B
+Text GLabel 6350 4950 0    50   Input ~ 0
+GENIO29_PR14B
+Text GLabel 6350 5050 0    50   Input ~ 0
+GENIO28_PT49A
+Text GLabel 6350 5150 0    50   Input ~ 0
+GENIO27_PT44A
+Text GLabel 6350 5250 0    50   Input ~ 0
+GENIO26_PR20B
+Text GLabel 6350 5350 0    50   Input ~ 0
+GENIO25_PR17B
+Text GLabel 6350 5450 0    50   Input ~ 0
+GENIO21_PT42A
+Text GLabel 6350 5550 0    50   Input ~ 0
+GENIO19_PT33B
+Wire Wire Line
+	6600 4850 6350 4850
+Wire Wire Line
+	6350 4950 6600 4950
+Wire Wire Line
+	6600 5050 6350 5050
+Wire Wire Line
+	6350 5150 6600 5150
+Wire Wire Line
+	6350 5250 6600 5250
+Wire Wire Line
+	6350 5350 6600 5350
+Wire Wire Line
+	6350 5450 6600 5450
+Wire Wire Line
+	6350 5550 6600 5550
+$Comp
+L tom-semiconductors:MUN3CAD01-SC PS1
+U 1 1 5DBE3C3E
+P 5450 6650
+F 0 "PS1" H 5750 6950 50  0000 C CNN
+F 1 "MUN3CAD01-SC" H 5350 5700 50  0000 C CNN
+F 2 "" H 5450 6650 50  0001 C CNN
+F 3 "" H 5450 6650 50  0001 C CNN
+	1    5450 6650
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	5350 7100 5550 7100
+$Comp
+L cartridge-rescue:GND-power #PWR06
+U 1 1 5DBE80C4
+P 5550 7200
+F 0 "#PWR06" H 5550 6950 50  0001 C CNN
+F 1 "GND" V 5555 7072 50  0000 R CNN
+F 2 "" H 5550 7200 50  0001 C CNN
+F 3 "" H 5550 7200 50  0001 C CNN
+	1    5550 7200
+	1    0    0    -1  
+$EndComp
+Connection ~ 5550 7100
+Wire Wire Line
+	5050 6600 4800 6600
+Connection ~ 4800 6600
+Wire Wire Line
+	5450 6250 4800 6250
+Wire Wire Line
+	4800 6250 4800 6600
+$Comp
+L tom-passives:R R1
+U 1 1 5DC00B47
+P 5900 6950
+F 0 "R1" H 5971 6988 40  0000 L CNN
+F 1 "100k/1%" H 5971 6912 40  0000 L CNN
+F 2 "" V 5830 6950 30  0000 C CNN
+F 3 "" H 5900 6950 30  0000 C CNN
+	1    5900 6950
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	5850 6700 5900 6700
+Wire Wire Line
+	5900 6700 5950 6700
+Connection ~ 5900 6700
+Wire Wire Line
+	5850 6600 6450 6600
+Wire Wire Line
+	6450 6600 6450 6700
+Wire Wire Line
+	5550 7100 5550 7200
+Wire Wire Line
+	5550 7200 5900 7200
+Connection ~ 5550 7200
+Wire Wire Line
+	4800 7100 5350 7100
+Connection ~ 5350 7100
+$Comp
+L tom-passives:R R2
+U 1 1 5DC022A1
+P 6200 6700
+F 0 "R2" V 5950 6700 40  0000 C CNN
+F 1 "22.1k/1%" V 6050 6700 40  0000 C CNN
+F 2 "" V 6130 6700 30  0000 C CNN
+F 3 "" H 6200 6700 30  0000 C CNN
+	1    6200 6700
+	0    1    1    0   
+$EndComp
+Wire Wire Line
+	4800 6950 4800 7100
+Wire Wire Line
+	4800 7100 4350 7100
+Wire Wire Line
+	4350 7100 4350 7000
+Connection ~ 4800 7100
+$EndSCHEMATC

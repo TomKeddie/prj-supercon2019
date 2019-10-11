@@ -1,0 +1,8 @@
+EESchema-DOCLIB  Version 2.0
+#
+$CMP W25Q128
+D External EEPROM with SPI interface in 8-pin package
+K EEPROM memory SPI serial
+$ENDCMP
+#
+#End Doc Library
