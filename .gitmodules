@@ -1,0 +1,6 @@
+[submodule "cartridge/tom-kicad"]
+	path = cartridge-pmod3/tom-kicad
+	url = git@github.com:TomKeddie/tom-kicad.git
+[submodule "cartridge/HDMI2USB-numato-opsis-hardware"]
+	path = cartridge-pmod3/HDMI2USB-numato-opsis-hardware
+	url = https://github.com/timvideos/HDMI2USB-numato-opsis-hardware.git
