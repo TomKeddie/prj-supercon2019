@@ -1139,4 +1139,20 @@ Wire Wire Line
 	7400 4850 7800 4850
 Text GLabel 3900 6500 2    50   Input ~ 0
 GENIO14_PT27A
+Text GLabel 9200 5350 0    50   Input ~ 0
+GENIO29_PR14B
+Text GLabel 9200 5750 0    50   Input ~ 0
+GENIO17_PT29A
+Text GLabel 9200 5250 0    50   Input ~ 0
+GENIO30_PT56B
+Text GLabel 9200 5650 0    50   Input ~ 0
+GENIO19_PT33B
+Text GLabel 9200 5150 0    50   Input ~ 0
+GENIO13_PT20A
+Text GLabel 9200 5550 0    50   Input ~ 0
+GENIO14_PT27A
+Text GLabel 9200 5050 0    50   Input ~ 0
+GENIO3_PL11B
+Text GLabel 9200 5450 0    50   Input ~ 0
+GENIO16_PT33A
 $EndSCHEMATC
