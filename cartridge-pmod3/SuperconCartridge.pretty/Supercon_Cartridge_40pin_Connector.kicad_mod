@@ -1,4 +1,4 @@
-(module Supercon_Cartridge_40pin_Connector (layer F.Cu) (tedit 5D9B7E27)
+(module Supercon_Cartridge_40pin_Connector (layer F.Cu) (tedit 5DA6527C)
   (descr "Through hole angled pin header, 2x20, 2.54mm pitch, 6mm pin length, double rows")
   (tags "Through hole angled pin header THT 2x20 2.54mm double row")
   (fp_text reference REF** (at 5.655 -2.27) (layer F.SilkS)
@@ -342,9 +342,9 @@
   (pad 38 thru_hole oval (at 0 2.54) (size 1.7 1.7) (drill 1) (layers *.Cu *.Mask))
   (pad 39 thru_hole oval (at 2.54 0) (size 1.7 1.7) (drill 1) (layers *.Cu *.Mask))
   (pad 40 thru_hole circle (at 0 0) (size 1.7 1.7) (drill 1) (layers *.Cu *.Mask))
-  (model ${KISYS3DMOD}/Connector_PinHeader_2.54mm.3dshapes/PinHeader_2x20_P2.54mm_Horizontal.step
-    (at (xyz 0 0 0))
+  (model "${KIPRJMOD}/61304021021 (rev1).igs"
+    (offset (xyz 5.2 -24 2.54))
     (scale (xyz 1 1 1))
-    (rotate (xyz 0 0 0))
+    (rotate (xyz 90 0 90))
   )
 )
