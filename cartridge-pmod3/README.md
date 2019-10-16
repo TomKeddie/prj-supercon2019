@@ -1,17 +1,17 @@
-# Unofficial KiCad template for a 2019 Hackaday Superconference Badge Cartridge
+# PMOD<sup>3</sup> cartridge for 2019 supercon badge
 
-This template can be used as a starting point to make a cartridge for the Supercon badge, that will mate with the 40 pin expansion connector on the back of the badge.
+## Pin Mapping
 
-| WARNING: This design is unofficial, and has NOT been tested |
-| --- |
+## Load options
 
-It's using an angled 2x20 pin male header, a w25q128 SPI flash and a 100nF cap. The schematic has the pins named using global nets, so it's easy to simply add in your own stuff.
+### Minimal
 
-## License
+### Minimal with optional local 3.3V support
 
-The contents of this repository is released under the following licence:
+### PMOD<sup>2</sup> with PRAM
 
- * the "Creative Commons Attribution-ShareAlike 4.0 International License"
-   (CC BY-SA 4.0) full text of this license is included in the LICENSE file
-   and a copy can also be found at
-   http://creativecommons.org/licenses/by-sa/4.0/
+## Schematic
+
+## Images
+
+![3d image](3d-view.png)
