@@ -1,0 +1,8 @@
+bitarray==1.0.1
+Jinja2==2.10.3
+MarkupSafe==1.1.1
+nmigen==0.1rc2.dev13+ge988778
+nmigen-boards==0.1.dev81+gbc07491
+pkg-resources==0.0.0
+pyvcd==0.1.4
+six==1.12.0
