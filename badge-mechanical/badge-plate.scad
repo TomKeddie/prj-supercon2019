@@ -1,10 +1,13 @@
 $fn=128;
 
 corner_radius=5;
-edge_offset=3;
+edge_offset=8;
 
 x_size=160-72;
 y_size=162-21.5;
+
+x_battery=20; // my fat finger
+y_battery=52;
 z_battery=15.06;
 
 z_pcb=2; // estimate
@@ -15,6 +18,10 @@ post_locations=[[2, 2, 0], [86, 2, 1], [85, 58, 2], [7, 137, 3]];
 post_hole_diameter=3.2;
 post_pcb_height=19.05;
 post_edge_offset=0.8;
+
+battery_locations=[[12.5, 28.5], [75.5, 28.5]];
+battery_corner_radius=4;
+
 
 %translate([0,0,post_pcb_height+z_pcb/2]) import("hadbadge2019-Edge_Cuts.dxf");
 
@@ -55,9 +62,26 @@ difference() {
         translate([x_size+edge_offset, y_size+edge_offset]) circle(r=corner_radius);
     }
     
+    // posts
     for(location=post_locations) {
         translate([location[0], location[1]]) {
             post(location[2]);
+        }
+    }
+    
+    // batteries
+    for(location=battery_locations) {
+        translate([location[0], location[1]]) {
+            hull() {
+                translate([+(x_battery/2-battery_corner_radius), +(y_battery/2-battery_corner_radius)]) 
+                    circle(r=battery_corner_radius);
+                translate([-(x_battery/2-battery_corner_radius), +(y_battery/2-battery_corner_radius)]) 
+                    circle(r=battery_corner_radius);
+                translate([+(x_battery/2-battery_corner_radius), -(y_battery/2-battery_corner_radius)]) 
+                    circle(r=battery_corner_radius);
+                translate([-(x_battery/2-battery_corner_radius), -(y_battery/2-battery_corner_radius)]) 
+                    circle(r=battery_corner_radius);
+            }
         }
     }
 }
