@@ -4,7 +4,7 @@
 //
 $fn=128;
 
-battery_diameter=18;
+battery_diameter=19.5;
 battery_length=65.2;
 
 plate_thickness=1;
@@ -65,14 +65,13 @@ module twocell()
     translate([-case_width/2+wall_thickness/2, 0, 0]) onecell(1,0);
     translate([+case_width/2-wall_thickness/2, 0, 0]) onecell(0,1);
             
-    translate([+(case_width+wall_thickness), +(case_length/2-mount_size/2), case_height/2])
+     translate([+(case_width-mount_size/2-wall_thickness/2), +(case_length/2+mount_size/2), case_height/2]) 
         mount();
-   
-    translate([-(case_width+wall_thickness), +(case_length/2-mount_size/2), case_height/2]) 
+     translate([-(case_width-mount_size/2-wall_thickness/2), +(case_length/2+mount_size/2), case_height/2]) 
         mount();
-    translate([+(case_width+wall_thickness), -(case_length/2-mount_size/2), case_height/2]) 
+     translate([+(case_width-mount_size/2-wall_thickness/2), -(case_length/2+mount_size/2), case_height/2]) 
         mount();
-    translate([-(case_width+wall_thickness), -(case_length/2-mount_size/2), case_height/2]) 
+     translate([-(case_width-mount_size/2-wall_thickness/2), -(case_length/2+mount_size/2), case_height/2]) 
         mount();
 }
 

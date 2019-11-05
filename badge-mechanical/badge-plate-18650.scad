@@ -14,13 +14,13 @@ post_hole_diameter=3.2;
 post_pcb_height=22.23;
 post_edge_offset=0.8;
 
-y_battery_opening=35.25;
-x_battery_opening=73.5;
+y_battery_opening=39.5;
+x_battery_opening=75.25;
 
 y_battery_position=19+46/2;
 x_battery_position=x_size/2-8;
 
-z_battery_holder=17.5;
+z_battery_holder=19;
 battery_holder_hole_diameter=3.2;
 battery_holder_wall_thickness=1.5;
 battery_holder_hole_offset=3;
@@ -73,6 +73,7 @@ difference() {
         }
     }
     
+    
     // battery opening
     translate([x_battery_position, y_battery_position]) {
         // model
@@ -80,13 +81,13 @@ difference() {
         // opening
         square([x_battery_opening, y_battery_opening], center=true);
         // holes
-        translate([+(x_battery_opening/2-battery_holder_wall_thickness/2), +(y_battery_opening/2+battery_holder_wall_thickness+battery_holder_hole_offset)])
+        translate([+(x_battery_opening/2+battery_holder_hole_offset+battery_holder_wall_thickness), +(y_battery_opening/2-battery_holder_wall_thickness)])
             circle(d=battery_holder_hole_diameter);
-        translate([-(x_battery_opening/2-battery_holder_wall_thickness/2), +(y_battery_opening/2+battery_holder_wall_thickness+battery_holder_hole_offset)])
+        translate([-(x_battery_opening/2+battery_holder_hole_offset+battery_holder_wall_thickness), +(y_battery_opening/2-battery_holder_wall_thickness)])
             circle(d=battery_holder_hole_diameter);
-        translate([+(x_battery_opening/2-battery_holder_wall_thickness/2), -(y_battery_opening/2+battery_holder_wall_thickness+battery_holder_hole_offset)])
+        translate([+(x_battery_opening/2+battery_holder_hole_offset+battery_holder_wall_thickness), -(y_battery_opening/2-battery_holder_wall_thickness)])
             circle(d=battery_holder_hole_diameter);
-        translate([-(x_battery_opening/2-battery_holder_wall_thickness/2), -(y_battery_opening/2+battery_holder_wall_thickness+battery_holder_hole_offset)])
+        translate([-(x_battery_opening/2+battery_holder_hole_offset+battery_holder_wall_thickness), -(y_battery_opening/2-battery_holder_wall_thickness)])
             circle(d=battery_holder_hole_diameter);
     }
 }
