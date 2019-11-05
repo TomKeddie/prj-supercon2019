@@ -3,7 +3,7 @@
 ## Badge Plate
 
 This plate was designed to go underneath the board.  It has battery holes, it's not clear if they're big enough.
-The openscad source and a dxf file for laser cutting are included.  Use thick acrylic as the pieces around the battery are tight.
+The openscad source and a dxf file for laser cutting are included.  Use thick acrylic as the pieces around the battery are thin.
 It is designed to sit on a table with rubber feet under it.  It could be adapted to cover the front with button holes if
 being handheld was preferred.  I have no badge it is untested.
 
