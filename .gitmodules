@@ -4,6 +4,3 @@
 [submodule "cartridge/HDMI2USB-numato-opsis-hardware"]
 	path = cartridge-pmod3/HDMI2USB-numato-opsis-hardware
 	url = https://github.com/timvideos/HDMI2USB-numato-opsis-hardware.git
-[submodule "nmigen/litex"]
-	path = nmigen/litex
-	url = https://github.com/enjoy-digital/litex.git
