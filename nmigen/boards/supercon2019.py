@@ -54,9 +54,9 @@ class Supercon2019Platform(LatticeECP5Platform):
 
         Resource("irda", 0,
                  Subsignal("tx", Pins("R16", dir="o")),
-                 Subsignal("rx", Pins("U16", dir="i")),
-                 Subsignal("sd", Pins("T16", dir="o")),
-                 Attrs(IO_STANDARD="LVCMOS33", PULLUP=1)
+                 Subsignal("rx", Pins("U16", dir="i"), Attrs(PULLUP=1)),
+                 Subsignal("sd", Pins("T16", dir="o"), Attrs(PULLUP=1)),
+                 Attrs(IO_STANDARD="LVCMOS33")
         ),
         
         Resource("usb", 0,
@@ -76,134 +76,78 @@ class Supercon2019Platform(LatticeECP5Platform):
         Resource("fsel_d", 0, Pins("D5", dir="o")),
         Resource("fsel_c", 0, Pins("E5", dir="o")),
 
-        # todo programmer
-        
+        Resource("dpdi", 0,
+                 Subsignal("d_p_0", Pins("N19", dir="o")),  # Blue +
+                 Subsignal("d_n_0", Pins("N20", dir="o")),  # Blue -
+                 Subsignal("d_p_1", Pins("L20", dir="o")),  # Green +
+                 Subsignal("d_n_1", Pins("M20", dir="o")),  # Green -
+                 Subsignal("d_p_2", Pins("L16", dir="o")),  # Red +
+                 Subsignal("d_n_2", Pins("L17", dir="o")),  # Red -
+                 Subsignal("d_p_3", Pins("P20", dir="o")),  # Clock +
+                 Subsignal("d_n_3", Pins("R20", dir="o")),  # Clock -
+                 Subsignal("eth_p", Pins("T19", dir="o")),  # Ethernet +
+                 Subsignal("eth_n", Pins("R18", dir="o")),  # Ethernet -
+                 Attrs(IO_STANDARD="LVCMOS33", DRIVE=4)
+        ),
 
+        Resource("psram", 0,
+                 Subsignal("nce", Pins("D20", dir="o")),
+                 Subsignal("sclk", Pins("E20", dir="o")),
+                 Subsignal("sio_0", Pins("E19", dir="io"), Attrs(PULLUP=1)),
+                 Subsignal("sio_1", Pins("D19", dir="io"), Attrs(PULLUP=1)),
+                 Subsignal("sio_2", Pins("C20", dir="io"), Attrs(PULLUP=1)),                 
+                 Subsignal("sio_3", Pins("F19", dir="io"), Attrs(PULLUP=1)),
+                 Attrs(IO_STANDARD="LVCMOS33")
+        ),
+        Resource("psram", 1,
+                 Subsignal("nce",   Pins("F20", dir="o")),
+                 Subsignal("sclk",  Pins("J19", dir="o")),
+                 Subsignal("sio_0", Pins("J20", dir="io"), Attrs(PULLUP=1)),
+                 Subsignal("sio_1", Pins("G19", dir="io"), Attrs(PULLUP=1)),
+                 Subsignal("sio_2", Pins("G20", dir="io"), Attrs(PULLUP=1)),                 
+                 Subsignal("sio_3", Pins("H20", dir="io"), Attrs(PULLUP=1)),
+                 Attrs(IO_STANDARD="LVCMOS33")
+        ),
+        Resource("lcd", 0,
+                 Subsignal("db_17", Pins("N1", dir="o")), 
+                 Subsignal("db_16", Pins("N3", dir="o")), 
+                 Subsignal("db_15", Pins("N2", dir="o")), 
+                 Subsignal("db_14", Pins("N4", dir="o")), 
+                 Subsignal("db_13", Pins("M1", dir="o")), 
+                 Subsignal("db_12", Pins("M3", dir="o")), 
+                 Subsignal("db_11", Pins("L1", dir="o")), 
+                 Subsignal("db_10", Pins("M4", dir="o")), 
+                 Subsignal("db_9", Pins("L2", dir="o")), 
+                 Subsignal("db_8", Pins("L3", dir="o")), 
+                 Subsignal("db_7", Pins("K1", dir="o")), 
+                 Subsignal("db_6", Pins("L4", dir="o")), 
+                 Subsignal("db_5", Pins("K2", dir="o")), 
+                 Subsignal("db_4", Pins("K3", dir="o")), 
+                 Subsignal("db_3", Pins("J1", dir="o")), 
+                 Subsignal("db_2", Pins("K4", dir="o")), 
+                 Subsignal("db_1", Pins("H1", dir="o")), 
+                 Subsignal("db_0", Pins("J3", dir="o")), 
+                 Subsignal("rd", Pins("P2", dir="o")), 
+                 Subsignal("wr", Pins("P4", dir="o")), 
+                 Subsignal("rs", Pins("P1", dir="o")), 
+                 Subsignal("rst", Pins("H2", dir="o")), 
+                 Subsignal("cs", Pins("P3", dir="o")), 
+                 Subsignal("id", Pins("J4", dir="i")), 
+                 Subsignal("fmark", Pins("G1", dir="i")), 
+                 Subsignal("blen", Pins("P5", dir="o")),
+        ),
+        Resource("adc", 0,
+                 Subsignal("ref1", Pins("H18", dir="i")),
+                 Subsignal("ref2", Pins("F17", dir="i")),
+                 Subsignal("ref3", Pins("D18", dir="i")),
+                 Subsignal("ref4", Pins("C18", dir="i"), Attrs(IO_STANDARD="LVDS")),
+                 Subsignal("p4", Pins("D17", dir="i")),
+                 Subsignal("refout", Pins("A19", dir="o")),
+        ),
     ]
 
-
-
-
-## #lcd
-## LOCATE COMP "lcd_db[17]" SITE "N1";
-## LOCATE COMP "lcd_db[16]" SITE "N3";
-## LOCATE COMP "lcd_db[15]" SITE "N2";
-## LOCATE COMP "lcd_db[14]" SITE "N4";
-## LOCATE COMP "lcd_db[13]" SITE "M1";
-## LOCATE COMP "lcd_db[12]" SITE "M3";
-## LOCATE COMP "lcd_db[11]" SITE "L1";
-## LOCATE COMP "lcd_db[10]" SITE "M4";
-## LOCATE COMP "lcd_db[9]" SITE "L2";
-## LOCATE COMP "lcd_db[8]" SITE "L3";
-## LOCATE COMP "lcd_db[7]" SITE "K1";
-## LOCATE COMP "lcd_db[6]" SITE "L4";
-## LOCATE COMP "lcd_db[5]" SITE "K2";
-## LOCATE COMP "lcd_db[4]" SITE "K3";
-## LOCATE COMP "lcd_db[3]" SITE "J1";
-## LOCATE COMP "lcd_db[2]" SITE "K4";
-## LOCATE COMP "lcd_db[1]" SITE "H1";
-## LOCATE COMP "lcd_db[0]" SITE "J3";
-## LOCATE COMP "lcd_rd" SITE "P2";
-## LOCATE COMP "lcd_wr" SITE "P4";
-## LOCATE COMP "lcd_rs" SITE "P1";
-## LOCATE COMP "lcd_rst" SITE "H2";
-## LOCATE COMP "lcd_cs" SITE "P3";
-## LOCATE COMP "lcd_id" SITE "J4";
-## LOCATE COMP "lcd_fmark" SITE "G1";
-## LOCATE COMP "lcd_blen" SITE "P5";
-## 
-## IOBUF PORT "lcd_db[17]" IO_TYPE=LVCMOS33;
-## IOBUF PORT "lcd_db[16]" IO_TYPE=LVCMOS33;
-## IOBUF PORT "lcd_db[15]" IO_TYPE=LVCMOS33;
-## IOBUF PORT "lcd_db[14]" IO_TYPE=LVCMOS33;
-## IOBUF PORT "lcd_db[13]" IO_TYPE=LVCMOS33;
-## IOBUF PORT "lcd_db[12]" IO_TYPE=LVCMOS33;
-## IOBUF PORT "lcd_db[11]" IO_TYPE=LVCMOS33;
-## IOBUF PORT "lcd_db[10]" IO_TYPE=LVCMOS33;
-## IOBUF PORT "lcd_db[9]" IO_TYPE=LVCMOS33;
-## IOBUF PORT "lcd_db[8]" IO_TYPE=LVCMOS33;
-## IOBUF PORT "lcd_db[7]" IO_TYPE=LVCMOS33;
-## IOBUF PORT "lcd_db[6]" IO_TYPE=LVCMOS33;
-## IOBUF PORT "lcd_db[5]" IO_TYPE=LVCMOS33;
-## IOBUF PORT "lcd_db[4]" IO_TYPE=LVCMOS33;
-## IOBUF PORT "lcd_db[3]" IO_TYPE=LVCMOS33;
-## IOBUF PORT "lcd_db[2]" IO_TYPE=LVCMOS33;
-## IOBUF PORT "lcd_db[1]" IO_TYPE=LVCMOS33;
-## IOBUF PORT "lcd_db[0]" IO_TYPE=LVCMOS33;
-## IOBUF PORT "lcd_rd" IO_TYPE=LVCMOS33;
-## IOBUF PORT "lcd_wr" IO_TYPE=LVCMOS33;
-## IOBUF PORT "lcd_rs" IO_TYPE=LVCMOS33;
-## IOBUF PORT "lcd_rst" IO_TYPE=LVCMOS33;
-## IOBUF PORT "lcd_cs" IO_TYPE=LVCMOS33;
-## IOBUF PORT "lcd_id" IO_TYPE=LVCMOS33;
-## IOBUF PORT "lcd_fmark" IO_TYPE=LVCMOS33;
-## IOBUF PORT "lcd_blen" IO_TYPE=LVCMOS33;
-## 
-## 
-## #PSRAM 1
-## LOCATE COMP "psrama_nce" SITE "D20";
-## LOCATE COMP "psrama_sclk" SITE "E20";
-## LOCATE COMP "psrama_sio[0]" SITE "E19";
-## LOCATE COMP "psrama_sio[1]" SITE "D19";
-## LOCATE COMP "psrama_sio[2]" SITE "C20";
-## LOCATE COMP "psrama_sio[3]" SITE "F19";
-## 
-## IOBUF PORT "psrama_nce" IO_TYPE=LVCMOS33;
-## IOBUF PORT "psrama_sclk" IO_TYPE=LVCMOS33;
-## IOBUF PORT "psrama_sio[0]" IO_TYPE=LVCMOS33 PULLMODE=UP;
-## IOBUF PORT "psrama_sio[1]" IO_TYPE=LVCMOS33 PULLMODE=UP;
-## IOBUF PORT "psrama_sio[2]" IO_TYPE=LVCMOS33 PULLMODE=UP;
-## IOBUF PORT "psrama_sio[3]" IO_TYPE=LVCMOS33 PULLMODE=UP;
-## 
-## #PSRAM 2
-## LOCATE COMP "psramb_nce" SITE "F20";
-## LOCATE COMP "psramb_sclk" SITE "J19";
-## LOCATE COMP "psramb_sio[0]" SITE "J20";
-## LOCATE COMP "psramb_sio[1]" SITE "G19";
-## LOCATE COMP "psramb_sio[2]" SITE "G20";
-## LOCATE COMP "psramb_sio[3]" SITE "H20";
-## 
-## IOBUF PORT "psramb_nce" IO_TYPE=LVCMOS33;
-## IOBUF PORT "psramb_sclk" IO_TYPE=LVCMOS33;
-## IOBUF PORT "psramb_sio[0]" IO_TYPE=LVCMOS33 PULLMODE=UP;
-## IOBUF PORT "psramb_sio[1]" IO_TYPE=LVCMOS33 PULLMODE=UP;
-## IOBUF PORT "psramb_sio[2]" IO_TYPE=LVCMOS33 PULLMODE=UP;
-## IOBUF PORT "psramb_sio[3]" IO_TYPE=LVCMOS33 PULLMODE=UP;
-## 
-## # GPDI differential interface (Video)
-## LOCATE COMP "gpdi_dp[0]" SITE "N19"; # Blue +
-## LOCATE COMP "gpdi_dn[0]" SITE "N20"; # Blue -
-## LOCATE COMP "gpdi_dp[1]" SITE "L20"; # Green +
-## LOCATE COMP "gpdi_dn[1]" SITE "M20"; # Green -
-## LOCATE COMP "gpdi_dp[2]" SITE "L16"; # Red +
-## LOCATE COMP "gpdi_dn[2]" SITE "L17"; # Red -
-## LOCATE COMP "gpdi_dp[3]" SITE "P20"; # Clock +
-## LOCATE COMP "gpdi_dn[3]" SITE "R20"; # Clock -
-## LOCATE COMP "gpdi_ethp" SITE "T19"; # Ethernet +
-## LOCATE COMP "gpdi_ethn" SITE "R18"; # Ethernet -
-## IOBUF PORT "gpdi_dp[0]" IO_TYPE=LVCMOS33 DRIVE=4;
-## IOBUF PORT "gpdi_dn[0]" IO_TYPE=LVCMOS33 DRIVE=4;
-## IOBUF PORT "gpdi_dp[1]" IO_TYPE=LVCMOS33 DRIVE=4;
-## IOBUF PORT "gpdi_dn[1]" IO_TYPE=LVCMOS33 DRIVE=4;
-## IOBUF PORT "gpdi_dp[2]" IO_TYPE=LVCMOS33 DRIVE=4;
-## IOBUF PORT "gpdi_dn[2]" IO_TYPE=LVCMOS33 DRIVE=4;
-## IOBUF PORT "gpdi_dp[3]" IO_TYPE=LVCMOS33 DRIVE=4;
-## IOBUF PORT "gpdi_dn[3]" IO_TYPE=LVCMOS33 DRIVE=4;
-## IOBUF PORT "gpdi_ethp" IO_TYPE=LVCMOS33 DRIVE=4;
-## IOBUF PORT "gpdi_ethn" IO_TYPE=LVCMOS33 DRIVE=4;
-## 
-## 
-## 
-## LOCATE COMP "adcref1" SITE "H18";
-## LOCATE COMP "adcref2" SITE "F17";
-## LOCATE COMP "adcref3" SITE "D18";
-## LOCATE COMP "adcref4" SITE "C18";
-## LOCATE COMP "adc4" SITE "D17";
-## LOCATE COMP "adcrefout" SITE "A19";
-## 
-## #has D17 as complementary input
-## IOBUF PORT "adcref4" IO_TYPE=LVDS; 
-## 
-## 
-## 
-## 
+    # todo programmer
+    def toolchain_program(self, products, name):
+        iceprog = os.environ.get("ICEPROG", "iceprog")
+        with products.extract("{}.bin".format(name)) as bitstream_filename:
+            subprocess.check_call([iceprog, bitstream_filename])
