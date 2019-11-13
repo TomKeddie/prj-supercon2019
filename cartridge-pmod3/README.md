@@ -20,6 +20,8 @@ If you want to you can not load PMOD4 and add Hyperram.  It uses the same schema
 
 ## Schematic
 
-## Images
+![Schematic](cartridge-schematic.svg)
+
+## Image
 
 ![3d image](3d-view.png)
