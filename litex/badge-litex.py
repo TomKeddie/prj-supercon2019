@@ -87,9 +87,11 @@ def main():
                       csr_csv="build/csr.csv",
                       compile_software=True,
                       compile_gateware=True)
-    builder.software_packages = [
-        ("bios", os.path.abspath(os.path.join(os.path.dirname(__file__), "sw")))
-    ]
+    for package in builder.software_packages:
+        if package[0] == "bios":
+            builder.software_packages.remove(package)
+            break
+    builder.add_software_package("bios", src_dir="../../../sw")
     vns = builder.build()
     soc.do_exit(vns)
     lxsocdoc.generate_docs(soc, builder.output_dir + "/documentation", project_name="Hack a Day Supercon 2019 Badge", author="Sean \"xobs\" Cross")
