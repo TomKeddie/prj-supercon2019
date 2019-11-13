@@ -6,8 +6,8 @@ edge_offset=8;
 x_size=160-72;
 y_size=162-21.5;
 
-x_battery=20; // my fat finger
-y_battery=52;
+x_battery=30; // my fat finger
+y_battery=67;
 z_battery=15.06;
 
 z_pcb=2; // estimate
@@ -19,7 +19,7 @@ post_hole_diameter=3.2;
 post_pcb_height=19.05;
 post_edge_offset=0.8;
 
-battery_locations=[[12.5, 28.5], [75.5, 28.5]];
+battery_locations=[[12.5+10, 28.5+15], [75.5-10, 28.5+15]];
 battery_corner_radius=4;
 
 

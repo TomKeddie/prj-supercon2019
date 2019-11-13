@@ -14,8 +14,8 @@ post_hole_diameter=3.2;
 post_pcb_height=22.23;
 post_edge_offset=0.8;
 
-y_battery_opening=39.5;
-x_battery_opening=75.25;
+y_battery_opening=38;
+x_battery_opening=73;
 
 y_battery_position=19+46/2;
 x_battery_position=x_size/2-8;
@@ -57,7 +57,6 @@ module post(direction) {
     }
 }
 
-//square([x_size, y_size]);
 difference() {
     hull() {
         translate([-edge_offset, -edge_offset]) circle(r=corner_radius);
