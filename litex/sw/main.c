@@ -7,6 +7,8 @@
 #include <generated/csr.h>
 #include <generated/mem.h>
 
+#include "oshcat.h"
+
 // 25ms
 #define TIMER_INTERVAL (CONFIG_CLOCK_FREQUENCY/40)
 
@@ -49,61 +51,16 @@ int main(void)
 #ifdef CSR_UART_BASE    
 	puts("Stub firmware booting...\n");
 #endif
-    const uint8_t pwm_period = 0xff;
 
-#if 0
-    // disable
-    pwm_upper_pwm_enable_write(0);
-    pwm_lower_pwm_enable_write(0);
-    pwm_left_pwm_enable_write(0);
-    pwm_right_pwm_enable_write(0);
-    // 12MHz / 100 = 120kHz
-    pwm_upper_pwm_divider_write(100);
-    pwm_lower_pwm_divider_write(100);
-    pwm_left_pwm_divider_write(100);
-    pwm_right_pwm_divider_write(100);
-    // 8 bits (max)
-    pwm_upper_pwm_period_write(pwm_period);
-    pwm_lower_pwm_period_write(pwm_period);
-    pwm_left_pwm_period_write(pwm_period);
-    pwm_right_pwm_period_write(pwm_period);
-    // enable
-    pwm_upper_pwm_enable_write(1);
-    pwm_lower_pwm_enable_write(1);
-    pwm_left_pwm_enable_write(1);
-    pwm_right_pwm_enable_write(1);
+    oshcat_init();
 
-    const uint8_t counter_lower_limit = 16;
-    const uint8_t counter_upper_limit = 128;
-    const uint8_t counter_step = 4;
-    
-    uint8_t counter = counter_lower_limit;
-    uint8_t countup = 1;
     timer0_ev_enable_write(1);
     while(1) {
         if (timer0_fired) {
             timer0_fired = 0;
-            pwm_upper_pwm_width_write(counter);
-            pwm_lower_pwm_width_write(counter_upper_limit+counter_step-counter);
-            pwm_left_pwm_width_write(counter);
-            pwm_right_pwm_width_write(counter);
-            if (countup) {
-                if (counter < counter_upper_limit) {
-                    counter += counter_step;
-                } else {
-                    countup = 0;
-                    counter -= counter_step;
-                }
-            } else {
-                if (counter >= counter_lower_limit) {
-                    counter -= counter_step;
-                } else {
-                    countup = 1;
-                    counter += counter_step;
-                }
-            }
+            oshcat_timer_fired();
         }
-	}
-#endif
-	return 0;
+    }
+
+    return 0;
 }

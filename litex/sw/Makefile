@@ -1,7 +1,7 @@
 include ../include/generated/variables.mak
 include $(SOC_DIRECTORY)/software/common.mak
 
-OBJECTS=main.o
+OBJECTS=main.o oshcat.o
 
 all: bios.bin
 
