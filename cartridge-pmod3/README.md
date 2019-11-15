@@ -1,5 +1,7 @@
 # PMOD<sup>3</sup> cartridge for 2019 supercon badge
 
+Credit to [esden](https://github.com/icebreaker-fpga/icebreaker-pmod/tree/master/hyperram/v1.0b) and thus [bml](https://github.com/blackmesalabs/hyperram) for the Hyperram idea and schematic.
+
 ## Pin Mapping
 
 The pin mapping was designed to keep differential pairs together.  I ran out of time to do the more complex pcb routing needed needed for differential pairs but this could be done in the future.
@@ -53,6 +55,14 @@ This is pretty much useless.  It adds local 3.3V regulators for each pmod.  But 
 ### PMOD<sup>2</sup> with HYPERRAM
 
 If you want to you can not load PMOD4 and add Hyperram.  It uses the same schematic as the [icebreaker pmod](https://github.com/icebreaker-fpga/icebreaker-pmod/tree/master/hyperram/v1.0b).  This option is untested YMMY.
+
+## Errata
+
+### v1.0
+
+ * As above the local 3.3V supplies are useless since the 5V is not VUSB as expected
+ * The pmod pin numbering on the silk is flipped by row, top is bottom and bottom is top
+ * There are 5 io that are either NC or only connected to the Hyperram, need to add a header
 
 ## Schematic
 
