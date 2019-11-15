@@ -6,12 +6,47 @@ import lxbuildenv
 
 from migen import *
 
-from haddecks import BaseSoC, BadgePlatform
+from haddecks import BaseSoC, BadgePlatform, GPIOBidirectional
 
+from litex.build.generic_platform import Pins, IOStandard, Subsignal, Inverted, Misc
 from litex.soc.integration.builder import Builder
 from litex.soc.interconnect.csr import *
 
 import lxsocdoc
+
+
+pmod_cubed = [
+        ("pmod2", 0,
+         Subsignal("p1", Pins("genio:{}".format(-1+6))),
+         Subsignal("p2", Pins("genio:{}".format(-1+5))),
+         Subsignal("p3", Pins("genio:{}".format(-1+2))),
+         Subsignal("p4", Pins("genio:{}".format(-1+1))),
+         Subsignal("p5", Pins("genio:{}".format(-1+23))),
+         Subsignal("p6", Pins("genio:{}".format(-1+22))),
+         Subsignal("p7", Pins("genio:{}".format(-1+10))),
+         Subsignal("p8", Pins("genio:{}".format(-1+11))),
+        ),
+        ("pmod3", 1,
+         Subsignal("p1", Pins("genio:{}".format(-1+4))),
+         Subsignal("p2", Pins("genio:{}".format(-1+8))),
+         Subsignal("p3", Pins("genio:{}".format(-1+9))),
+         Subsignal("p4", Pins("genio:{}".format(-1+12))),
+         Subsignal("p5", Pins("genio:{}".format(-1+15))),
+         Subsignal("p6", Pins("genio:{}".format(-1+18))),
+         Subsignal("p7", Pins("genio:{}".format(-1+20))),
+         Subsignal("p8", Pins("genio:{}".format(-1+24))),
+        ),
+        ("pmod4", 2,
+         Subsignal("p1", Pins("genio:{}".format(-1+3))),
+         Subsignal("p2", Pins("genio:{}".format(-1+13))),
+         Subsignal("p3", Pins("genio:{}".format(-1+30))),
+         Subsignal("p4", Pins("genio:{}".format(-1+29))),
+         Subsignal("p5", Pins("genio:{}".format(-1+16))),
+         Subsignal("p6", Pins("genio:{}".format(-1+14))),
+         Subsignal("p7", Pins("genio:{}".format(-1+19))),
+         Subsignal("p8", Pins("genio:{}".format(-1+17))),
+        ),
+         ]
 
 class PWM(Module, AutoCSR):
     def __init__(self, pwm_pin, width=32):
@@ -74,12 +109,22 @@ def main():
                   debug=True,
                   cpu_type=cpu_type,
                   cpu_variant=cpu_variant,
+                  csr_address_width=16,
                   sao0_disable=True,
                   sao1_disable=True,
+                  genio_disable=True,
     )
 
     sao0_pwmgroup = PWMGroup(soc, "sao0", platform.request("sao", 0))
     sao1_pwmgroup = PWMGroup(soc, "sao1", platform.request("sao", 1))
+
+    platform.add_extension(pmod_cubed)
+    soc.submodules.pmod2 = GPIOBidirectional(platform.request("pmod2"))
+    soc.add_csr("pmod2")
+    soc.submodules.pmod3 = GPIOBidirectional(platform.request("pmod3"))
+    soc.add_csr("pmod3")
+    soc.submodules.pmod4 = GPIOBidirectional(platform.request("pmod4"))
+    soc.add_csr("pmod4")
 
     
     builder = Builder(soc,
