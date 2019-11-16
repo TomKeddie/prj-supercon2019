@@ -2,6 +2,9 @@
 import sys
 import usb
 import array
+import pprint
+
+pp = pprint.PrettyPrinter(indent=4)
 
 # This file is meant to be a canvas for you to try control requests your new sample device.
 # You can try a variety of requests my modifying this file -- particularly by modifying the 
@@ -45,11 +48,11 @@ def control_transfer(device, direction, type, destination, request, index, value
         device -- The pyusb device to work with.
         direction -- Sets the direction of the transaction-- either DEVICE_TO_HOST or HOST_TO_DEVICE.
         type -- Sets the type of request; usually one of the _REQUEST constants above.
-        destination -- Sets the 'destination' of the request; this would probably better be 
+        destination -- Sets the 'destination' of the request; this would probably better be
                 thought of as the 'context' of the request. Almost always RECIPIENT_DEVICE.
 
         request - The request number. Valid values include the specification-provided request numbers for standard
-                requests, or any number < 256 for a vendor request 
+                requests, or any number < 256 for a vendor request
         index -- index argument; < 65536
         value -- value argument; < 65536
 
@@ -64,7 +67,7 @@ def control_transfer(device, direction, type, destination, request, index, value
         # If we got a raw result, return it.
         if not isinstance(result, array.array):
             return result
-       
+
         # Convert the result into a nice, printable format for the exercise.
         # We'll use whichever method is provided by the python install (py2 vs py3 difference)
         if hasattr(result, 'tobytes'):
@@ -73,7 +76,7 @@ def control_transfer(device, direction, type, destination, request, index, value
             return repr(result.tostring())
 
     except usb.core.USBError as e:
-        if e.errno == 32:
+        if e.errno == 32 or e.errno is None:
             return "STALLED"
         else:
             raise e
@@ -109,24 +112,28 @@ result = control_transfer(
 )
 
 print("device descriptor: {}".format(result))
+pp.pprint(result)
 
 #
 # We don't necessarily know exactly what features this device surfaces.
 # Let's try asking it for a particular vendor request.
 #
 
-result = control_transfer(
-    dev,               # work with the device we just opened
-    DEVICE_TO_HOST,    # asking for data _from_ the device
-    VENDOR_REQUEST,    # we're checking to see if this device supports our vendor-specific request
-    RECIPIENT_DEVICE,  # we're talking about the device itself
-    0x0,               # issue vendor request 0
-    0,                 # we don't know the arguments to this request; so we'll have to experiment
-    0,
-    32                 # return up to 32 bytes
-)
-
-print("trying vendor request 0: {}".format(result))
+for iz in range(255,0,-1):
+    for iy in range(255,0,-1):
+        for ix in range(255,0,-1):
+            result = control_transfer(
+                dev,               # work with the device we just opened
+                DEVICE_TO_HOST,    # asking for data _from_ the device
+                VENDOR_REQUEST,    # we're checking to see if this device supports our vendor-specific request
+                RECIPIENT_DEVICE,  # we're talking about the device itself
+                ix,               # issue vendor request 0
+                iy,                 # we don't know the arguments to this request; so we'll have to experiment
+                iz,
+                32                 # return up to 32 bytes
+            )
+    
+            print("trying vendor request {:02x} ({:02x} {:02x}): {}".format(ix, iy, iz, result))
 
 #
 # Hmmm. It doesn't look like _that_ particular vendor request worked-- but
