@@ -1,3 +1,7 @@
+# DO NOT USE REV 1.0 OF THIS BOARD.  3.3V and GND ARE REVERSED IN THE TEMPLATE I USED
+
+See https://github.com/flummer/supercon2019-protocartridge/issues/1
+
 # PMOD<sup>3</sup> cartridge for 2019 supercon badge
 
 Credit to [esden](https://github.com/icebreaker-fpga/icebreaker-pmod/tree/master/hyperram/v1.0b) and thus [bml](https://github.com/blackmesalabs/hyperram) for the Hyperram idea and schematic.
