@@ -51,11 +51,11 @@ pmod_cubed = [
 
 class PWM(Module, AutoCSR):
     def __init__(self, pwm_pin, width=32):
-        self._enable = CSRStorage(description="1-bit pwm enable")
+        self._enable  = CSRStorage(description="1-bit pwm enable")
         self._divider = CSRStorage(16, description="16-bit pwm divider")
-        self._width  = CSRStorage(width, description="{}-bit pulse width".format(width))
-        self._period = CSRStorage(width, description="{}-bit total width".format(width))
-        self._cnt    = CSRStatus(width, description="{}-bit current count value (ro)".format(width))
+        self._width   = CSRStorage(width, description="{}-bit pulse width".format(width))
+        self._period  = CSRStorage(width, description="{}-bit total width".format(width))
+        self._cnt     = CSRStatus(width, description="{}-bit current count value (ro)".format(width))
 
         # # #
 
@@ -140,7 +140,9 @@ def main():
     builder.add_software_package("bios", src_dir="../../../sw")
     vns = builder.build()
     soc.do_exit(vns)
-    lxsocdoc.generate_docs(soc, builder.output_dir + "/documentation", project_name="Hack a Day Supercon 2019 Badge", author="Sean \"xobs\" Cross")
+    lxsocdoc.generate_docs(soc,
+                           builder.output_dir + "/documentation",
+                           project_name="Hack a Day Supercon 2019 Badge", author="was Sean \"xobs\" Cross")
 
 
 

@@ -9,8 +9,8 @@
 
 #include "oshcat.h"
 
-// 25ms
-#define TIMER_INTERVAL (CONFIG_CLOCK_FREQUENCY/40)
+// 50ms
+#define TIMER_INTERVAL (CONFIG_CLOCK_FREQUENCY/20)
 
 volatile uint8_t timer0_fired = 0;
 
