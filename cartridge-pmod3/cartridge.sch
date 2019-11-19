@@ -15,120 +15,6 @@ Comment3 ""
 Comment4 ""
 $EndDescr
 $Comp
-L cartridge-rescue:Conn_01x40_Male-Connector J1
-U 1 1 5D9B779E
-P 1100 3000
-F 0 "J1" H 1208 5081 50  0000 C CNN
-F 1 "Cartridge Connector" H 1208 4990 50  0000 C CNN
-F 2 "SuperconCartridge:Supercon_Cartridge_40pin_Connector" H 1100 3000 50  0001 C CNN
-F 3 "~" H 1100 3000 50  0001 C CNN
-	1    1100 3000
-	1    0    0    -1  
-$EndComp
-$Comp
-L cartridge-rescue:GND-power #PWR01
-U 1 1 5D9C2B6C
-P 1300 1100
-F 0 "#PWR01" H 1300 850 50  0001 C CNN
-F 1 "GND" V 1305 972 50  0000 R CNN
-F 2 "" H 1300 1100 50  0001 C CNN
-F 3 "" H 1300 1100 50  0001 C CNN
-	1    1300 1100
-	0    -1   -1   0   
-$EndComp
-$Comp
-L cartridge-rescue:+3V3-power #PWR02
-U 1 1 5D9C3D7F
-P 1300 1200
-F 0 "#PWR02" H 1300 1050 50  0001 C CNN
-F 1 "+3V3" V 1315 1328 50  0000 L CNN
-F 2 "" H 1300 1200 50  0001 C CNN
-F 3 "" H 1300 1200 50  0001 C CNN
-	1    1300 1200
-	0    1    1    0   
-$EndComp
-Text GLabel 1300 1300 2    50   Input ~ 0
-F_HOLD
-Text GLabel 1300 1400 2    50   Input ~ 0
-F_CS
-Text GLabel 1300 1500 2    50   Input ~ 0
-F_SCK
-Text GLabel 1300 1600 2    50   Input ~ 0
-F_MISO
-Text GLabel 1300 1700 2    50   Input ~ 0
-F_MOSI
-Text GLabel 1300 1800 2    50   Input ~ 0
-F_WP
-$Comp
-L cartridge-rescue:+5V-power #PWR03
-U 1 1 5D9C7C1B
-P 1300 4900
-F 0 "#PWR03" H 1300 4750 50  0001 C CNN
-F 1 "+5V" V 1315 5028 50  0000 L CNN
-F 2 "" H 1300 4900 50  0001 C CNN
-F 3 "" H 1300 4900 50  0001 C CNN
-	1    1300 4900
-	0    1    1    0   
-$EndComp
-Text GLabel 1300 1900 2    50   Input ~ 0
-GENIO1_PL11D_N
-Text GLabel 1300 2000 2    50   Input ~ 0
-GENIO2_PL11C_P
-Text GLabel 1300 2100 2    50   Input ~ 0
-GENIO3_PL11B
-Text GLabel 1300 2200 2    50   Input ~ 0
-GENIO4_PT11A_P
-Text GLabel 1300 2300 2    50   Input ~ 0
-GENIO5_PT4B_N
-Text GLabel 1300 2400 2    50   Input ~ 0
-GENIO6_PT4A_P
-Text GLabel 1300 2500 2    50   Input ~ 0
-GENIO7_PT6B
-Text GLabel 1300 2600 2    50   Input ~ 0
-GENIO8_PT11B_N
-Text GLabel 1300 2700 2    50   Input ~ 0
-GENIO9_PT18A_P
-Text GLabel 1300 2800 2    50   Input ~ 0
-GENIO10_PT15A_P
-Text GLabel 1300 2900 2    50   Input ~ 0
-GENIO11_PT15B_N
-Text GLabel 1300 3000 2    50   Input ~ 0
-GENIO12_PT18B_N
-Text GLabel 1300 3200 2    50   Input ~ 0
-GENIO14_PT27A
-Text GLabel 1300 3300 2    50   Input ~ 0
-GENIO15_PT31A_P
-Text GLabel 1300 3400 2    50   Input ~ 0
-GENIO16_PT33A
-Text GLabel 1300 3500 2    50   Input ~ 0
-GENIO17_PT29A
-Text GLabel 1300 3600 2    50   Input ~ 0
-GENIO18_PT31B_N
-Text GLabel 1300 3700 2    50   Input ~ 0
-GENIO19_PT33B
-Text GLabel 1300 3800 2    50   Input ~ 0
-GENIO20_PT36A_P
-Text GLabel 1300 3900 2    50   Input ~ 0
-GENIO21_PT42A
-Text GLabel 1300 4000 2    50   Input ~ 0
-GENIO22_PT38B_N
-Text GLabel 1300 4100 2    50   Input ~ 0
-GENIO23_PT38A_P
-Text GLabel 1300 4200 2    50   Input ~ 0
-GENIO24_PT36B_N
-Text GLabel 1300 4300 2    50   Input ~ 0
-GENIO25_PR17B
-Text GLabel 1300 4400 2    50   Input ~ 0
-GENIO26_PR20B
-Text GLabel 1300 4500 2    50   Input ~ 0
-GENIO27_PT44A
-Text GLabel 1300 4600 2    50   Input ~ 0
-GENIO28_PT49A
-Text GLabel 1300 4700 2    50   Input ~ 0
-GENIO29_PR14B
-Text GLabel 1300 4800 2    50   Input ~ 0
-GENIO30_PT56B
-$Comp
 L tom-semiconductors:W25Q128 U2
 U 1 1 5D9CC1B6
 P 3350 1350
@@ -140,10 +26,10 @@ F 3 "" H 3650 1450 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L cartridge-rescue:GND-power #PWR010
+L power:GND #PWR09
 U 1 1 5D9CD8D7
 P 2700 1500
-F 0 "#PWR010" H 2700 1250 50  0001 C CNN
+F 0 "#PWR09" H 2700 1250 50  0001 C CNN
 F 1 "GND" V 2705 1372 50  0000 R CNN
 F 2 "" H 2700 1500 50  0001 C CNN
 F 3 "" H 2700 1500 50  0001 C CNN
@@ -151,7 +37,7 @@ F 3 "" H 2700 1500 50  0001 C CNN
 	0    1    1    0   
 $EndComp
 $Comp
-L cartridge-rescue:+3V3-power #PWR013
+L power:+3V3 #PWR013
 U 1 1 5D9CE167
 P 4000 1200
 F 0 "#PWR013" H 4000 1050 50  0001 C CNN
@@ -162,19 +48,19 @@ F 3 "" H 4000 1200 50  0001 C CNN
 	0    1    1    0   
 $EndComp
 Text GLabel 4000 1300 2    50   Input ~ 0
-F_HOLD
+HOLD
 Text GLabel 2700 1200 0    50   Input ~ 0
-F_CS
+CS
 Text GLabel 2700 1400 0    50   Input ~ 0
-F_WP
+WP
 Text GLabel 2700 1300 0    50   Input ~ 0
-F_MISO
+MISO
 Text GLabel 4000 1500 2    50   Input ~ 0
-F_MOSI
+MOSI
 Text GLabel 4000 1400 2    50   Input ~ 0
-F_SCK
+SCK
 $Comp
-L cartridge-rescue:C-device C5
+L tom-passives:C C5
 U 1 1 5D9D09A7
 P 2800 2100
 F 0 "C5" H 2915 2146 50  0000 L CNN
@@ -185,10 +71,10 @@ F 3 "~" H 2800 2100 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L cartridge-rescue:+3V3-power #PWR011
+L power:+3V3 #PWR010
 U 1 1 5D9D1A8B
 P 2800 1900
-F 0 "#PWR011" H 2800 1750 50  0001 C CNN
+F 0 "#PWR010" H 2800 1750 50  0001 C CNN
 F 1 "+3V3" H 2815 2073 50  0000 C CNN
 F 2 "" H 2800 1900 50  0001 C CNN
 F 3 "" H 2800 1900 50  0001 C CNN
@@ -196,10 +82,10 @@ F 3 "" H 2800 1900 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L cartridge-rescue:GND-power #PWR012
+L power:GND #PWR011
 U 1 1 5D9D279F
 P 2800 2300
-F 0 "#PWR012" H 2800 2050 50  0001 C CNN
+F 0 "#PWR011" H 2800 2050 50  0001 C CNN
 F 1 "GND" V 2805 2172 50  0000 R CNN
 F 2 "" H 2800 2300 50  0001 C CNN
 F 3 "" H 2800 2300 50  0001 C CNN
@@ -278,10 +164,10 @@ Wire Wire Line
 Wire Wire Line
 	2450 7000 2350 7000
 $Comp
-L cartridge-rescue:GND-power #PWR07
+L power:GND #PWR05
 U 1 1 5D9E5D3F
 P 2350 7350
-F 0 "#PWR07" H 2350 7100 50  0001 C CNN
+F 0 "#PWR05" H 2350 7100 50  0001 C CNN
 F 1 "GND" V 2355 7222 50  0000 R CNN
 F 2 "" H 2350 7350 50  0001 C CNN
 F 3 "" H 2350 7350 50  0001 C CNN
@@ -303,10 +189,10 @@ Wire Wire Line
 Wire Wire Line
 	2450 6000 2350 6000
 $Comp
-L cartridge-rescue:+3V3-power #PWR06
+L power:+3V3 #PWR04
 U 1 1 5D9E437A
 P 2350 5650
-F 0 "#PWR06" H 2350 5500 50  0001 C CNN
+F 0 "#PWR04" H 2350 5500 50  0001 C CNN
 F 1 "+3V3" H 2365 5823 50  0000 C CNN
 F 2 "" H 2350 5650 50  0001 C CNN
 F 3 "" H 2350 5650 50  0001 C CNN
@@ -359,10 +245,10 @@ F 3 "" H 2400 2100 60  0000 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L cartridge-rescue:+3V3-power #PWR08
+L power:+3V3 #PWR06
 U 1 1 5DA90FF8
 P 2400 1900
-F 0 "#PWR08" H 2400 1750 50  0001 C CNN
+F 0 "#PWR06" H 2400 1750 50  0001 C CNN
 F 1 "+3V3" H 2415 2073 50  0000 C CNN
 F 2 "" H 2400 1900 50  0001 C CNN
 F 3 "" H 2400 1900 50  0001 C CNN
@@ -370,10 +256,10 @@ F 3 "" H 2400 1900 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L cartridge-rescue:GND-power #PWR09
+L power:GND #PWR07
 U 1 1 5DA91002
 P 2400 2300
-F 0 "#PWR09" H 2400 2050 50  0001 C CNN
+F 0 "#PWR07" H 2400 2050 50  0001 C CNN
 F 1 "GND" V 2405 2172 50  0000 R CNN
 F 2 "" H 2400 2300 50  0001 C CNN
 F 3 "" H 2400 2300 50  0001 C CNN
@@ -381,10 +267,10 @@ F 3 "" H 2400 2300 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L cartridge-rescue:GND-power #PWR031
+L power:GND #PWR030
 U 1 1 5DA9DABE
 P 9900 2550
-F 0 "#PWR031" H 9900 2300 50  0001 C CNN
+F 0 "#PWR030" H 9900 2300 50  0001 C CNN
 F 1 "GND" V 9905 2422 50  0000 R CNN
 F 2 "" H 9900 2550 50  0001 C CNN
 F 3 "" H 9900 2550 50  0001 C CNN
@@ -392,10 +278,10 @@ F 3 "" H 9900 2550 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L cartridge-rescue:GND-power #PWR032
+L power:GND #PWR031
 U 1 1 5DA9E128
 P 9900 4300
-F 0 "#PWR032" H 9900 4050 50  0001 C CNN
+F 0 "#PWR031" H 9900 4050 50  0001 C CNN
 F 1 "GND" V 9905 4172 50  0000 R CNN
 F 2 "" H 9900 4300 50  0001 C CNN
 F 3 "" H 9900 4300 50  0001 C CNN
@@ -473,16 +359,11 @@ Text GLabel 9200 3950 0    50   Input ~ 0
 GENIO20_PT36A_P
 Text GLabel 9200 4050 0    50   Input ~ 0
 GENIO24_PT36B_N
-Text GLabel 1300 3100 2    50   Input ~ 0
-GENIO13_PT20A
 Text GLabel 3900 6800 2    50   Input ~ 0
 GENIO3_PL11B
 Wire Wire Line
 	9800 4300 9900 4300
 Connection ~ 9900 4300
-NoConn ~ 1300 5000
-Text Notes 1400 5050 0    50   ~ 0
-BATT
 $Comp
 L tom-connectors:PMOD-2x6-FEMALE PMOD4
 U 1 1 5DB5CE78
@@ -495,10 +376,10 @@ F 3 "" H 9750 5400 50  0001 C CNN
 	-1   0    0    -1  
 $EndComp
 $Comp
-L cartridge-rescue:GND-power #PWR033
+L power:GND #PWR032
 U 1 1 5DB5DEC7
 P 9900 6000
-F 0 "#PWR033" H 9900 5750 50  0001 C CNN
+F 0 "#PWR032" H 9900 5750 50  0001 C CNN
 F 1 "GND" V 9905 5872 50  0000 R CNN
 F 2 "" H 9900 6000 50  0001 C CNN
 F 3 "" H 9900 6000 50  0001 C CNN
@@ -526,358 +407,40 @@ Wire Wire Line
 	9200 5650 9450 5650
 Wire Wire Line
 	9200 5750 9450 5750
-$Comp
-L tom-semiconductors:AP2112K-3.3 U3
-U 1 1 5DA45B98
-P 6150 1750
-F 0 "U3" H 6150 2092 50  0000 C CNN
-F 1 "AP2112K-3.3" H 6150 2001 50  0000 C CNN
-F 2 "tom-semiconductors:SOT-23-5_HandSoldering" H 6150 2075 50  0001 C CNN
-F 3 "https://www.diodes.com/assets/Datasheets/AP2112.pdf" H 6150 1850 50  0001 C CNN
-	1    6150 1750
-	1    0    0    -1  
-$EndComp
-$Comp
-L tom-semiconductors:AP2112K-3.3 U4
-U 1 1 5DA545E3
-P 6150 3500
-F 0 "U4" H 6150 3842 50  0000 C CNN
-F 1 "AP2112K-3.3" H 6150 3751 50  0000 C CNN
-F 2 "tom-semiconductors:SOT-23-5_HandSoldering" H 6150 3825 50  0001 C CNN
-F 3 "https://www.diodes.com/assets/Datasheets/AP2112.pdf" H 6150 3600 50  0001 C CNN
-	1    6150 3500
-	1    0    0    -1  
-$EndComp
-$Comp
-L tom-semiconductors:AP2112K-3.3 U5
-U 1 1 5DA5543C
-P 6150 5200
-F 0 "U5" H 6150 5542 50  0000 C CNN
-F 1 "AP2112K-3.3" H 6150 5451 50  0000 C CNN
-F 2 "tom-semiconductors:SOT-23-5_HandSoldering" H 6150 5525 50  0001 C CNN
-F 3 "https://www.diodes.com/assets/Datasheets/AP2112.pdf" H 6150 5300 50  0001 C CNN
-	1    6150 5200
-	1    0    0    -1  
-$EndComp
-$Comp
-L tom-passives:C C8
-U 1 1 5DA5E9E6
-P 5500 3600
-F 0 "C8" H 5615 3638 40  0000 L CNN
-F 1 "1uF/10V" H 5615 3562 40  0000 L CNN
-F 2 "tom-passives:C_0805_2012Metric_Pad1.15x1.40mm_HandSolder" H 5538 3450 30  0001 C CNN
-F 3 "" H 5500 3600 60  0000 C CNN
-	1    5500 3600
-	1    0    0    -1  
-$EndComp
-$Comp
-L tom-passives:C C9
-U 1 1 5DA61583
-P 5500 5300
-F 0 "C9" H 5728 5338 40  0000 L CNN
-F 1 "1uF/10V" H 5728 5262 40  0000 L CNN
-F 2 "tom-passives:C_0805_2012Metric_Pad1.15x1.40mm_HandSolder" H 5538 5150 30  0001 C CNN
-F 3 "" H 5500 5300 60  0000 C CNN
-	1    5500 5300
-	1    0    0    -1  
-$EndComp
-Connection ~ 5500 1650
-Wire Wire Line
-	5500 1650 5800 1650
-Wire Wire Line
-	5300 3400 5500 3400
-Connection ~ 5500 3400
-Wire Wire Line
-	5500 3400 5800 3400
-Connection ~ 5300 3400
-Connection ~ 5500 5100
-Wire Wire Line
-	5500 5100 5800 5100
-$Comp
-L cartridge-rescue:GND-power #PWR016
-U 1 1 5DA68F92
-P 5500 2050
-F 0 "#PWR016" H 5500 1800 50  0001 C CNN
-F 1 "GND" V 5505 1922 50  0000 R CNN
-F 2 "" H 5500 2050 50  0001 C CNN
-F 3 "" H 5500 2050 50  0001 C CNN
-	1    5500 2050
-	1    0    0    -1  
-$EndComp
-$Comp
-L cartridge-rescue:GND-power #PWR017
-U 1 1 5DA695F0
-P 5500 3800
-F 0 "#PWR017" H 5500 3550 50  0001 C CNN
-F 1 "GND" V 5505 3672 50  0000 R CNN
-F 2 "" H 5500 3800 50  0001 C CNN
-F 3 "" H 5500 3800 50  0001 C CNN
-	1    5500 3800
-	1    0    0    -1  
-$EndComp
-$Comp
-L cartridge-rescue:GND-power #PWR018
-U 1 1 5DA69B59
-P 5500 5500
-F 0 "#PWR018" H 5500 5250 50  0001 C CNN
-F 1 "GND" V 5505 5372 50  0000 R CNN
-F 2 "" H 5500 5500 50  0001 C CNN
-F 3 "" H 5500 5500 50  0001 C CNN
-	1    5500 5500
-	1    0    0    -1  
-$EndComp
-$Comp
-L cartridge-rescue:GND-power #PWR021
-U 1 1 5DA6A145
-P 6150 5500
-F 0 "#PWR021" H 6150 5250 50  0001 C CNN
-F 1 "GND" V 6155 5372 50  0000 R CNN
-F 2 "" H 6150 5500 50  0001 C CNN
-F 3 "" H 6150 5500 50  0001 C CNN
-	1    6150 5500
-	1    0    0    -1  
-$EndComp
-$Comp
-L cartridge-rescue:GND-power #PWR020
-U 1 1 5DA6A6BE
-P 6150 3800
-F 0 "#PWR020" H 6150 3550 50  0001 C CNN
-F 1 "GND" V 6155 3672 50  0000 R CNN
-F 2 "" H 6150 3800 50  0001 C CNN
-F 3 "" H 6150 3800 50  0001 C CNN
-	1    6150 3800
-	1    0    0    -1  
-$EndComp
-$Comp
-L cartridge-rescue:GND-power #PWR019
-U 1 1 5DA6AB9E
-P 6150 2050
-F 0 "#PWR019" H 6150 1800 50  0001 C CNN
-F 1 "GND" V 6155 1922 50  0000 R CNN
-F 2 "" H 6150 2050 50  0001 C CNN
-F 3 "" H 6150 2050 50  0001 C CNN
-	1    6150 2050
-	1    0    0    -1  
-$EndComp
-Wire Wire Line
-	4850 3400 5300 3400
-Wire Wire Line
-	5800 1650 5800 1750
-Wire Wire Line
-	5800 1750 5850 1750
-Connection ~ 5800 1650
-Wire Wire Line
-	5800 1650 5850 1650
-Wire Wire Line
-	5800 3400 5800 3500
-Wire Wire Line
-	5800 3500 5850 3500
-Connection ~ 5800 3400
-Wire Wire Line
-	5800 3400 5850 3400
-Wire Wire Line
-	5800 5100 5800 5200
-Wire Wire Line
-	5800 5200 5850 5200
-Connection ~ 5800 5100
-Wire Wire Line
-	5800 5100 5850 5100
-$Comp
-L tom-mechanical:JUMPER3 JP2
-U 1 1 5DB3CE33
-P 7000 1400
-F 0 "JP2" V 6962 1502 40  0000 L CNN
-F 1 "JUMPER3" V 7038 1502 40  0000 L CNN
-F 2 "tom-connectors:PinHeader_1x03_P2.54mm_Vertical" H 7000 1400 60  0001 C CNN
-F 3 "" H 7000 1400 60  0000 C CNN
-	1    7000 1400
-	0    -1   1    0   
-$EndComp
-$Comp
-L tom-mechanical:JUMPER3 JP3
-U 1 1 5DB4406B
-P 7000 3150
-F 0 "JP3" V 6962 3252 40  0000 L CNN
-F 1 "JUMPER3" V 7038 3252 40  0000 L CNN
-F 2 "tom-connectors:PinHeader_1x03_P2.54mm_Vertical" H 7000 3150 60  0001 C CNN
-F 3 "" H 7000 3150 60  0000 C CNN
-	1    7000 3150
-	0    -1   1    0   
-$EndComp
-$Comp
-L tom-mechanical:JUMPER3 JP1
-U 1 1 5DB460F2
-P 6950 4850
-F 0 "JP1" V 6912 4952 40  0000 L CNN
-F 1 "JUMPER3" V 6988 4952 40  0000 L CNN
-F 2 "tom-connectors:PinHeader_1x03_P2.54mm_Vertical" H 6950 4850 60  0001 C CNN
-F 3 "" H 6950 4850 60  0000 C CNN
-	1    6950 4850
-	0    -1   1    0   
-$EndComp
-Wire Wire Line
-	6450 1650 6550 1650
-Wire Wire Line
-	6450 3400 6550 3400
-Wire Wire Line
-	6450 5100 6550 5100
-$Comp
-L cartridge-rescue:+3V3-power #PWR026
-U 1 1 5DB70ECD
-P 7000 1150
-F 0 "#PWR026" H 7000 1000 50  0001 C CNN
-F 1 "+3V3" H 7015 1323 50  0000 C CNN
-F 2 "" H 7000 1150 50  0001 C CNN
-F 3 "" H 7000 1150 50  0001 C CNN
-	1    7000 1150
-	1    0    0    -1  
-$EndComp
-$Comp
-L cartridge-rescue:+3V3-power #PWR027
-U 1 1 5DB72530
-P 7000 2900
-F 0 "#PWR027" H 7000 2750 50  0001 C CNN
-F 1 "+3V3" H 7015 3073 50  0000 C CNN
-F 2 "" H 7000 2900 50  0001 C CNN
-F 3 "" H 7000 2900 50  0001 C CNN
-	1    7000 2900
-	1    0    0    -1  
-$EndComp
-$Comp
-L cartridge-rescue:+3V3-power #PWR025
-U 1 1 5DB73256
-P 6950 4600
-F 0 "#PWR025" H 6950 4450 50  0001 C CNN
-F 1 "+3V3" H 6965 4773 50  0000 C CNN
-F 2 "" H 6950 4600 50  0001 C CNN
-F 3 "" H 6950 4600 50  0001 C CNN
-	1    6950 4600
-	1    0    0    -1  
-$EndComp
-Wire Wire Line
-	5300 1650 5500 1650
-$Comp
-L tom-passives:C C7
-U 1 1 5DA5D94C
-P 5500 1850
-F 0 "C7" H 5615 1888 40  0000 L CNN
-F 1 "1uF/10V" H 5615 1812 40  0000 L CNN
-F 2 "tom-passives:C_0805_2012Metric_Pad1.15x1.40mm_HandSolder" H 5538 1700 30  0001 C CNN
-F 3 "" H 5500 1850 60  0000 C CNN
-	1    5500 1850
-	1    0    0    -1  
-$EndComp
-$Comp
-L tom-passives:C C10
-U 1 1 5DB8DD1F
-P 6550 1850
-F 0 "C10" H 6665 1888 40  0000 L CNN
-F 1 "1uF/10V" H 6665 1812 40  0000 L CNN
-F 2 "tom-passives:C_0805_2012Metric_Pad1.15x1.40mm_HandSolder" H 6588 1700 30  0001 C CNN
-F 3 "" H 6550 1850 60  0000 C CNN
-	1    6550 1850
-	1    0    0    -1  
-$EndComp
-$Comp
-L tom-passives:C C11
-U 1 1 5DB8E3CD
-P 6550 3600
-F 0 "C11" H 6665 3638 40  0000 L CNN
-F 1 "1uF/10V" H 6665 3562 40  0000 L CNN
-F 2 "tom-passives:C_0805_2012Metric_Pad1.15x1.40mm_HandSolder" H 6588 3450 30  0001 C CNN
-F 3 "" H 6550 3600 60  0000 C CNN
-	1    6550 3600
-	1    0    0    -1  
-$EndComp
-$Comp
-L tom-passives:C C12
-U 1 1 5DB8EB58
-P 6550 5300
-F 0 "C12" H 6665 5338 40  0000 L CNN
-F 1 "1uF/10V" H 6665 5262 40  0000 L CNN
-F 2 "tom-passives:C_0805_2012Metric_Pad1.15x1.40mm_HandSolder" H 6588 5150 30  0001 C CNN
-F 3 "" H 6550 5300 60  0000 C CNN
-	1    6550 5300
-	1    0    0    -1  
-$EndComp
-Connection ~ 6550 5100
-Wire Wire Line
-	6550 5100 6950 5100
-$Comp
-L cartridge-rescue:GND-power #PWR024
-U 1 1 5DB8F30A
-P 6550 5500
-F 0 "#PWR024" H 6550 5250 50  0001 C CNN
-F 1 "GND" V 6555 5372 50  0000 R CNN
-F 2 "" H 6550 5500 50  0001 C CNN
-F 3 "" H 6550 5500 50  0001 C CNN
-	1    6550 5500
-	1    0    0    -1  
-$EndComp
-$Comp
-L cartridge-rescue:GND-power #PWR023
-U 1 1 5DB8F831
-P 6550 3800
-F 0 "#PWR023" H 6550 3550 50  0001 C CNN
-F 1 "GND" V 6555 3672 50  0000 R CNN
-F 2 "" H 6550 3800 50  0001 C CNN
-F 3 "" H 6550 3800 50  0001 C CNN
-	1    6550 3800
-	1    0    0    -1  
-$EndComp
-$Comp
-L cartridge-rescue:GND-power #PWR022
-U 1 1 5DB8FE1C
-P 6550 2050
-F 0 "#PWR022" H 6550 1800 50  0001 C CNN
-F 1 "GND" V 6555 1922 50  0000 R CNN
-F 2 "" H 6550 2050 50  0001 C CNN
-F 3 "" H 6550 2050 50  0001 C CNN
-	1    6550 2050
-	1    0    0    -1  
-$EndComp
 Connection ~ 9800 4850
 Connection ~ 9800 3150
 Connection ~ 9800 1400
-Text Label 8250 1400 0    50   ~ 0
-3V3-PMOD2
-Text Label 8250 3150 0    50   ~ 0
-3V3-PMOD3
-Text Label 8250 4850 0    50   ~ 0
-3V3-PMOD4
 $Comp
-L tom-passives:C C13
+L tom-passives:C C10
 U 1 1 5DBF98AB
 P 7800 1600
-F 0 "C13" H 7915 1638 40  0000 L CNN
+F 0 "C10" H 7915 1638 40  0000 L CNN
 F 1 "10uF/10V" H 7915 1562 40  0000 L CNN
 F 2 "tom-passives:C_0805_2012Metric_Pad1.15x1.40mm_HandSolder" H 7838 1450 30  0001 C CNN
 F 3 "" H 7800 1600 60  0000 C CNN
 	1    7800 1600
 	1    0    0    -1  
 $EndComp
-Connection ~ 7800 1400
 Wire Wire Line
 	7800 1400 9800 1400
 $Comp
-L tom-passives:C C14
+L tom-passives:C C11
 U 1 1 5DBFF146
 P 7800 3350
-F 0 "C14" H 7915 3388 40  0000 L CNN
+F 0 "C11" H 7915 3388 40  0000 L CNN
 F 1 "10uF/10V" H 7915 3312 40  0000 L CNN
 F 2 "tom-passives:C_0805_2012Metric_Pad1.15x1.40mm_HandSolder" H 7838 3200 30  0001 C CNN
 F 3 "" H 7800 3350 60  0000 C CNN
 	1    7800 3350
 	1    0    0    -1  
 $EndComp
-Connection ~ 7800 3150
 Wire Wire Line
 	7800 3150 9800 3150
 $Comp
-L tom-passives:C C15
+L tom-passives:C C12
 U 1 1 5DBFF6F2
 P 7800 5050
-F 0 "C15" H 7915 5088 40  0000 L CNN
+F 0 "C12" H 7915 5088 40  0000 L CNN
 F 1 "10uF/10V" H 7915 5012 40  0000 L CNN
 F 2 "tom-passives:C_0805_2012Metric_Pad1.15x1.40mm_HandSolder" H 7838 4900 30  0001 C CNN
 F 3 "" H 7800 5050 60  0000 C CNN
@@ -887,10 +450,10 @@ $EndComp
 Wire Wire Line
 	7800 4850 9800 4850
 $Comp
-L cartridge-rescue:GND-power #PWR030
+L power:GND #PWR029
 U 1 1 5DC03D2C
 P 7800 5250
-F 0 "#PWR030" H 7800 5000 50  0001 C CNN
+F 0 "#PWR029" H 7800 5000 50  0001 C CNN
 F 1 "GND" V 7805 5122 50  0000 R CNN
 F 2 "" H 7800 5250 50  0001 C CNN
 F 3 "" H 7800 5250 50  0001 C CNN
@@ -898,10 +461,10 @@ F 3 "" H 7800 5250 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L cartridge-rescue:GND-power #PWR029
+L power:GND #PWR027
 U 1 1 5DC04BC9
 P 7800 3550
-F 0 "#PWR029" H 7800 3300 50  0001 C CNN
+F 0 "#PWR027" H 7800 3300 50  0001 C CNN
 F 1 "GND" V 7805 3422 50  0000 R CNN
 F 2 "" H 7800 3550 50  0001 C CNN
 F 3 "" H 7800 3550 50  0001 C CNN
@@ -909,58 +472,18 @@ F 3 "" H 7800 3550 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L cartridge-rescue:GND-power #PWR028
+L power:GND #PWR025
 U 1 1 5DC07B1B
 P 7800 1800
-F 0 "#PWR028" H 7800 1550 50  0001 C CNN
+F 0 "#PWR025" H 7800 1550 50  0001 C CNN
 F 1 "GND" V 7805 1672 50  0000 R CNN
 F 2 "" H 7800 1800 50  0001 C CNN
 F 3 "" H 7800 1800 50  0001 C CNN
 	1    7800 1800
 	1    0    0    -1  
 $EndComp
-Text Label 6600 5100 0    50   ~ 0
-3V3-C
-Text Label 6600 3400 0    50   ~ 0
-3V3-B
-Text Label 6600 1650 0    50   ~ 0
-3V3-A
 $Comp
-L cartridge-rescue:+5V-power #PWR014
-U 1 1 5DB29EE1
-P 4850 3400
-F 0 "#PWR014" H 4850 3250 50  0001 C CNN
-F 1 "+5V" V 4865 3528 50  0000 L CNN
-F 2 "" H 4850 3400 50  0001 C CNN
-F 3 "" H 4850 3400 50  0001 C CNN
-	1    4850 3400
-	1    0    0    -1  
-$EndComp
-$Comp
-L cartridge-rescue:GND-power #PWR015
-U 1 1 5DB0CF56
-P 4850 3800
-F 0 "#PWR015" H 4850 3550 50  0001 C CNN
-F 1 "GND" V 4855 3672 50  0000 R CNN
-F 2 "" H 4850 3800 50  0001 C CNN
-F 3 "" H 4850 3800 50  0001 C CNN
-	1    4850 3800
-	1    0    0    -1  
-$EndComp
-$Comp
-L tom-passives:C C6
-U 1 1 5DB0CF42
-P 4850 3600
-F 0 "C6" H 4965 3638 40  0000 L CNN
-F 1 "10uF/10V" H 4965 3562 40  0000 L CNN
-F 2 "tom-passives:C_0805_2012Metric_Pad1.15x1.40mm_HandSolder" H 4888 3450 30  0001 C CNN
-F 3 "" H 4850 3600 60  0000 C CNN
-	1    4850 3600
-	1    0    0    -1  
-$EndComp
-Connection ~ 4850 3400
-$Comp
-L cartridge-rescue:C-device C3
+L tom-passives:C C3
 U 1 1 5DD698B4
 P 1750 7200
 F 0 "C3" H 1865 7246 50  0000 L CNN
@@ -971,10 +494,10 @@ F 3 "~" H 1750 7200 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L cartridge-rescue:+3V3-power #PWR04
+L power:+3V3 #PWR02
 U 1 1 5DD698BE
 P 1750 7000
-F 0 "#PWR04" H 1750 6850 50  0001 C CNN
+F 0 "#PWR02" H 1750 6850 50  0001 C CNN
 F 1 "+3V3" H 1765 7173 50  0000 C CNN
 F 2 "" H 1750 7000 50  0001 C CNN
 F 3 "" H 1750 7000 50  0001 C CNN
@@ -982,10 +505,10 @@ F 3 "" H 1750 7000 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L cartridge-rescue:GND-power #PWR05
+L power:GND #PWR03
 U 1 1 5DD698C8
 P 1750 7400
-F 0 "#PWR05" H 1750 7150 50  0001 C CNN
+F 0 "#PWR03" H 1750 7150 50  0001 C CNN
 F 1 "GND" V 1755 7272 50  0000 R CNN
 F 2 "" H 1750 7400 50  0001 C CNN
 F 3 "" H 1750 7400 50  0001 C CNN
@@ -997,7 +520,7 @@ Wire Wire Line
 Wire Wire Line
 	1750 7350 1750 7400
 $Comp
-L cartridge-rescue:C-device C2
+L tom-passives:C C2
 U 1 1 5DD84F54
 P 1250 7200
 F 0 "C2" H 1365 7246 50  0000 L CNN
@@ -1008,7 +531,7 @@ F 3 "~" H 1250 7200 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L cartridge-rescue:C-device C1
+L tom-passives:C C1
 U 1 1 5DD85F1E
 P 750 7200
 F 0 "C1" H 865 7246 50  0000 L CNN
@@ -1038,105 +561,8 @@ Wire Wire Line
 Connection ~ 1250 7400
 Wire Wire Line
 	1250 7400 750  7400
-Connection ~ 6550 1650
-Wire Wire Line
-	6550 1650 7000 1650
-Wire Wire Line
-	7000 3400 6550 3400
-Connection ~ 6550 3400
-Wire Wire Line
-	5300 3400 5300 5100
-Wire Wire Line
-	5300 5100 5500 5100
-Connection ~ 7800 4850
-Wire Wire Line
-	5300 1650 5300 3400
-Text GLabel 4800 7300 0    50   Input ~ 0
+Text GLabel 6000 1550 3    50   Input ~ 0
 GENIO7_PT6B
-Wire Wire Line
-	4800 7300 5200 7300
-NoConn ~ 5200 7300
-$Comp
-L tom-mechanical:JUMPER JP5
-U 1 1 5DEA3461
-P 7350 2850
-F 0 "JP5" V 7312 2952 60  0000 L CNN
-F 1 "JUMPER" V 7403 2952 40  0000 L CNN
-F 2 "tom-mechanical:SolderJumper-2_P1.3mm_Bridged_Pad1.0x1.5mm" H 7350 2850 60  0001 C CNN
-F 3 "" H 7350 2850 60  0000 C CNN
-	1    7350 2850
-	0    1    1    0   
-$EndComp
-$Comp
-L tom-mechanical:JUMPER JP6
-U 1 1 5DEA4B8A
-P 7400 4550
-F 0 "JP6" V 7362 4677 60  0000 L CNN
-F 1 "JUMPER" V 7453 4677 40  0000 L CNN
-F 2 "tom-mechanical:SolderJumper-2_P1.3mm_Bridged_Pad1.0x1.5mm" H 7400 4550 60  0001 C CNN
-F 3 "" H 7400 4550 60  0000 C CNN
-	1    7400 4550
-	0    1    1    0   
-$EndComp
-$Comp
-L tom-mechanical:JUMPER JP4
-U 1 1 5DEC4DC7
-P 7350 1100
-F 0 "JP4" V 7312 1227 60  0000 L CNN
-F 1 "JUMPER" V 7403 1227 40  0000 L CNN
-F 2 "tom-mechanical:SolderJumper-2_P1.3mm_Bridged_Pad1.0x1.5mm" H 7350 1100 60  0001 C CNN
-F 3 "" H 7350 1100 60  0000 C CNN
-	1    7350 1100
-	0    1    1    0   
-$EndComp
-$Comp
-L cartridge-rescue:+3V3-power #PWR0101
-U 1 1 5DEDD9D4
-P 7350 2550
-F 0 "#PWR0101" H 7350 2400 50  0001 C CNN
-F 1 "+3V3" H 7365 2723 50  0000 C CNN
-F 2 "" H 7350 2550 50  0001 C CNN
-F 3 "" H 7350 2550 50  0001 C CNN
-	1    7350 2550
-	1    0    0    -1  
-$EndComp
-$Comp
-L cartridge-rescue:+3V3-power #PWR0102
-U 1 1 5DEDDE25
-P 7350 800
-F 0 "#PWR0102" H 7350 650 50  0001 C CNN
-F 1 "+3V3" H 7365 973 50  0000 C CNN
-F 2 "" H 7350 800 50  0001 C CNN
-F 3 "" H 7350 800 50  0001 C CNN
-	1    7350 800 
-	1    0    0    -1  
-$EndComp
-$Comp
-L cartridge-rescue:+3V3-power #PWR0103
-U 1 1 5DEE118A
-P 7400 4250
-F 0 "#PWR0103" H 7400 4100 50  0001 C CNN
-F 1 "+3V3" H 7415 4423 50  0000 C CNN
-F 2 "" H 7400 4250 50  0001 C CNN
-F 3 "" H 7400 4250 50  0001 C CNN
-	1    7400 4250
-	1    0    0    -1  
-$EndComp
-Wire Wire Line
-	7100 3150 7350 3150
-Wire Wire Line
-	7050 4850 7400 4850
-Wire Wire Line
-	7100 1400 7350 1400
-Connection ~ 7350 1400
-Wire Wire Line
-	7350 1400 7800 1400
-Connection ~ 7350 3150
-Wire Wire Line
-	7350 3150 7800 3150
-Connection ~ 7400 4850
-Wire Wire Line
-	7400 4850 7800 4850
 Text GLabel 3900 6500 2    50   Input ~ 0
 GENIO14_PT27A
 Text GLabel 9200 5350 0    50   Input ~ 0
@@ -1155,4 +581,426 @@ Text GLabel 9200 5050 0    50   Input ~ 0
 GENIO3_PL11B
 Text GLabel 9200 5450 0    50   Input ~ 0
 GENIO16_PT33A
+$Comp
+L power:GND #PWR08
+U 1 1 5DD04DB0
+P 2450 3100
+F 0 "#PWR08" H 2450 2850 50  0001 C CNN
+F 1 "GND" H 2455 2927 50  0000 C CNN
+F 2 "" H 2450 3100 50  0001 C CNN
+F 3 "" H 2450 3100 50  0001 C CNN
+	1    2450 3100
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	1950 3000 2450 3000
+Wire Wire Line
+	2450 3000 2450 3100
+Text GLabel 1450 3100 0    50   Input ~ 0
+CS
+Text GLabel 1450 3200 0    50   Input ~ 0
+MISO
+Text GLabel 1450 3300 0    50   Input ~ 0
+WP
+Text GLabel 1950 3100 2    50   Input ~ 0
+HOLD
+Text GLabel 1950 3200 2    50   Input ~ 0
+SCK
+Text GLabel 1950 3300 2    50   Input ~ 0
+MOSI
+$Comp
+L tom-connectors:Conn_02x20_Odd_Even-Connector_Generic CON1
+U 1 1 5DD04DC7
+P 1650 3900
+F 0 "CON1" H 1700 5017 50  0000 C CNN
+F 1 "Conn_02x20_Odd_Even" H 1700 4926 50  0000 C CNN
+F 2 "tom-connectors:PinHeader_2x20_P2.54mm_Horizontal_Mirrored" H 1650 3900 50  0001 C CNN
+F 3 "similar to https://lcsc.com/product-detail/Pin-Header-Female-Header_Shenzhen-Cankemeng-Headers-Pins-2-20P-2-54mm-Curved-needle_C124369.html" H 1650 3900 50  0001 C CNN
+	1    1650 3900
+	1    0    0    -1  
+$EndComp
+Text GLabel 1450 3400 0    50   Input ~ 0
+GENIO1_PL11D_N
+Text GLabel 1450 3500 0    50   Input ~ 0
+GENIO3_PL11B
+Text GLabel 1450 3600 0    50   Input ~ 0
+GENIO5_PT4B_N
+Text GLabel 1450 3700 0    50   Input ~ 0
+GENIO7_PT6B
+Text GLabel 1450 3800 0    50   Input ~ 0
+GENIO9_PT18A_P
+Text GLabel 1450 3900 0    50   Input ~ 0
+GENIO11_PT15B_N
+Text GLabel 1450 4000 0    50   Input ~ 0
+GENIO13_PT20A
+Text GLabel 1450 4100 0    50   Input ~ 0
+GENIO15_PT31A_P
+Text GLabel 1450 4200 0    50   Input ~ 0
+GENIO17_PT29A
+Text GLabel 1450 4300 0    50   Input ~ 0
+GENIO19_PT33B
+Text GLabel 1450 4400 0    50   Input ~ 0
+GENIO21_PT42A
+Text GLabel 1450 4500 0    50   Input ~ 0
+GENIO23_PT38A_P
+Text GLabel 1450 4600 0    50   Input ~ 0
+GENIO25_PR17B
+Text GLabel 1450 4700 0    50   Input ~ 0
+GENIO27_PT44A
+Text GLabel 1450 4800 0    50   Input ~ 0
+GENIO29_PR14B
+Text GLabel 1950 3400 2    50   Input ~ 0
+GENIO2_PL11C_P
+Text GLabel 1950 3500 2    50   Input ~ 0
+GENIO4_PT11A_P
+Text GLabel 1950 3600 2    50   Input ~ 0
+GENIO6_PT4A_P
+Text GLabel 1950 3700 2    50   Input ~ 0
+GENIO8_PT11B_N
+Text GLabel 1950 3800 2    50   Input ~ 0
+GENIO10_PT15A_P
+Text GLabel 1950 3900 2    50   Input ~ 0
+GENIO12_PT18B_N
+Text GLabel 1950 4000 2    50   Input ~ 0
+GENIO14_PT27A
+Text GLabel 1950 4100 2    50   Input ~ 0
+GENIO16_PT33A
+Text GLabel 1950 4200 2    50   Input ~ 0
+GENIO18_PT31B_N
+Text GLabel 1950 4300 2    50   Input ~ 0
+GENIO20_PT36A_P
+Text GLabel 1950 4400 2    50   Input ~ 0
+GENIO22_PT38B_N
+Text GLabel 1950 4500 2    50   Input ~ 0
+GENIO24_PT36B_N
+Text GLabel 1950 4600 2    50   Input ~ 0
+GENIO26_PR20B
+Text GLabel 1950 4700 2    50   Input ~ 0
+GENIO28_PT49A
+Text GLabel 1950 4800 2    50   Input ~ 0
+GENIO30_PT56B
+$Comp
+L power:+3V3 #PWR028
+U 1 1 5DD5DA61
+P 7800 4850
+F 0 "#PWR028" H 7800 4700 50  0001 C CNN
+F 1 "+3V3" H 7815 5023 50  0000 C CNN
+F 2 "" H 7800 4850 50  0001 C CNN
+F 3 "" H 7800 4850 50  0001 C CNN
+	1    7800 4850
+	1    0    0    -1  
+$EndComp
+Connection ~ 7800 4850
+$Comp
+L power:+3V3 #PWR026
+U 1 1 5DD5F0E0
+P 7800 3150
+F 0 "#PWR026" H 7800 3000 50  0001 C CNN
+F 1 "+3V3" H 7815 3323 50  0000 C CNN
+F 2 "" H 7800 3150 50  0001 C CNN
+F 3 "" H 7800 3150 50  0001 C CNN
+	1    7800 3150
+	1    0    0    -1  
+$EndComp
+Connection ~ 7800 3150
+$Comp
+L power:+3V3 #PWR01
+U 1 1 5DD004C5
+P 1200 2800
+F 0 "#PWR01" H 1200 2650 50  0001 C CNN
+F 1 "+3V3" H 1215 2973 50  0000 C CNN
+F 2 "" H 1200 2800 50  0001 C CNN
+F 3 "" H 1200 2800 50  0001 C CNN
+	1    1200 2800
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	1450 3000 1200 3000
+Wire Wire Line
+	1200 3000 1200 2800
+NoConn ~ 1450 4900
+$Comp
+L power:+3V3 #PWR024
+U 1 1 5DD11870
+P 7800 1400
+F 0 "#PWR024" H 7800 1250 50  0001 C CNN
+F 1 "+3V3" H 7815 1573 50  0000 C CNN
+F 2 "" H 7800 1400 50  0001 C CNN
+F 3 "" H 7800 1400 50  0001 C CNN
+	1    7800 1400
+	1    0    0    -1  
+$EndComp
+Connection ~ 7800 1400
+$Comp
+L tom-connectors:Conn_01x09_Male J1
+U 1 1 5DD25ABE
+P 5800 950
+F 0 "J1" V 5635 928 50  0000 C CNN
+F 1 "Conn_01x09_Male" V 5726 928 50  0000 C CNN
+F 2 "tom-connectors:PinHeader_1x09_P2.54mm_Horizontal" H 5800 950 50  0001 C CNN
+F 3 "~" H 5800 950 50  0001 C CNN
+	1    5800 950 
+	0    1    1    0   
+$EndComp
+$Comp
+L power:GND #PWR017
+U 1 1 5DD2BEB2
+P 5500 1150
+F 0 "#PWR017" H 5500 900 50  0001 C CNN
+F 1 "GND" V 5505 1022 50  0000 R CNN
+F 2 "" H 5500 1150 50  0001 C CNN
+F 3 "" H 5500 1150 50  0001 C CNN
+	1    5500 1150
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR020
+U 1 1 5DD2C85B
+P 6100 1150
+F 0 "#PWR020" H 6100 900 50  0001 C CNN
+F 1 "GND" V 6105 1022 50  0000 R CNN
+F 2 "" H 6100 1150 50  0001 C CNN
+F 3 "" H 6100 1150 50  0001 C CNN
+	1    6100 1150
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:+3V3 #PWR016
+U 1 1 5DD2CAE3
+P 5200 1150
+F 0 "#PWR016" H 5200 1000 50  0001 C CNN
+F 1 "+3V3" H 5215 1323 50  0000 C CNN
+F 2 "" H 5200 1150 50  0001 C CNN
+F 3 "" H 5200 1150 50  0001 C CNN
+	1    5200 1150
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:+3V3 #PWR021
+U 1 1 5DD2D161
+P 6400 1150
+F 0 "#PWR021" H 6400 1000 50  0001 C CNN
+F 1 "+3V3" H 6415 1323 50  0000 C CNN
+F 2 "" H 6400 1150 50  0001 C CNN
+F 3 "" H 6400 1150 50  0001 C CNN
+	1    6400 1150
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	6200 1150 6200 1200
+Wire Wire Line
+	6200 1200 6400 1200
+Wire Wire Line
+	6400 1200 6400 1150
+Wire Wire Line
+	5400 1150 5400 1200
+Wire Wire Line
+	5400 1200 5200 1200
+Wire Wire Line
+	5200 1200 5200 1150
+Text GLabel 5900 1550 3    50   Input ~ 0
+GENIO21_PT42A
+Text GLabel 5800 1550 3    50   Input ~ 0
+GENIO26_PR20B
+Text GLabel 5700 1550 3    50   Input ~ 0
+GENIO27_PT44A
+Text GLabel 5600 1550 3    50   Input ~ 0
+GENIO28_PT49A
+Wire Wire Line
+	6000 1150 6000 1550
+Wire Wire Line
+	5900 1150 5900 1550
+Wire Wire Line
+	5800 1150 5800 1550
+Wire Wire Line
+	5700 1150 5700 1550
+Wire Wire Line
+	5600 1150 5600 1550
+$Comp
+L tom-passives:C C9
+U 1 1 5DD6E244
+P 6450 1850
+F 0 "C9" H 6565 1888 40  0000 L CNN
+F 1 "10uF" H 6565 1812 40  0000 L CNN
+F 2 "tom-passives:C_0805_2012Metric_Pad1.15x1.40mm_HandSolder" H 6488 1700 30  0001 C CNN
+F 3 "" H 6450 1850 60  0000 C CNN
+	1    6450 1850
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:+3V3 #PWR022
+U 1 1 5DD6E24E
+P 6450 1650
+F 0 "#PWR022" H 6450 1500 50  0001 C CNN
+F 1 "+3V3" H 6465 1823 50  0000 C CNN
+F 2 "" H 6450 1650 50  0001 C CNN
+F 3 "" H 6450 1650 50  0001 C CNN
+	1    6450 1650
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR023
+U 1 1 5DD6E258
+P 6450 2050
+F 0 "#PWR023" H 6450 1800 50  0001 C CNN
+F 1 "GND" V 6455 1922 50  0000 R CNN
+F 2 "" H 6450 2050 50  0001 C CNN
+F 3 "" H 6450 2050 50  0001 C CNN
+	1    6450 2050
+	1    0    0    -1  
+$EndComp
+$Comp
+L tom-passives:C C7
+U 1 1 5DD8031D
+P 5100 1850
+F 0 "C7" H 5215 1888 40  0000 L CNN
+F 1 "10uF" H 5215 1812 40  0000 L CNN
+F 2 "tom-passives:C_0805_2012Metric_Pad1.15x1.40mm_HandSolder" H 5138 1700 30  0001 C CNN
+F 3 "" H 5100 1850 60  0000 C CNN
+	1    5100 1850
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:+3V3 #PWR014
+U 1 1 5DD80327
+P 5100 1650
+F 0 "#PWR014" H 5100 1500 50  0001 C CNN
+F 1 "+3V3" H 5115 1823 50  0000 C CNN
+F 2 "" H 5100 1650 50  0001 C CNN
+F 3 "" H 5100 1650 50  0001 C CNN
+	1    5100 1650
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR015
+U 1 1 5DD80331
+P 5100 2050
+F 0 "#PWR015" H 5100 1800 50  0001 C CNN
+F 1 "GND" V 5105 1922 50  0000 R CNN
+F 2 "" H 5100 2050 50  0001 C CNN
+F 3 "" H 5100 2050 50  0001 C CNN
+	1    5100 2050
+	1    0    0    -1  
+$EndComp
+$Comp
+L tom-connectors:Conn_01x02 J2
+U 1 1 5DDD5D62
+P 6100 6500
+F 0 "J2" H 6180 6492 50  0000 L CNN
+F 1 "Conn_01x02" H 6180 6401 50  0000 L CNN
+F 2 "tom-connectors:JST-2-SMD" H 6100 6500 50  0001 C CNN
+F 3 "~" H 6100 6500 50  0001 C CNN
+	1    6100 6500
+	1    0    0    -1  
+$EndComp
+$Comp
+L tom-connectors:Conn_01x02 J3
+U 1 1 5DDDE332
+P 6100 6900
+F 0 "J3" H 6180 6892 50  0000 L CNN
+F 1 "Conn_01x02" H 6180 6801 50  0000 L CNN
+F 2 "tom-connectors:JST-2-SMD" H 6100 6900 50  0001 C CNN
+F 3 "~" H 6100 6900 50  0001 C CNN
+	1    6100 6900
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	5900 6500 5700 6500
+Wire Wire Line
+	5700 6500 5700 6900
+$Comp
+L power:GND #PWR018
+U 1 1 5DDEB7D2
+P 5700 7000
+F 0 "#PWR018" H 5700 6750 50  0001 C CNN
+F 1 "GND" V 5705 6872 50  0000 R CNN
+F 2 "" H 5700 7000 50  0001 C CNN
+F 3 "" H 5700 7000 50  0001 C CNN
+	1    5700 7000
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	5900 6900 5700 6900
+Connection ~ 5700 6900
+Wire Wire Line
+	5900 6600 5800 6600
+Connection ~ 5800 6600
+Wire Wire Line
+	5800 6600 5800 6400
+Wire Wire Line
+	5900 7000 5800 7000
+Wire Wire Line
+	5800 7000 5800 6600
+$Comp
+L power:+5V #PWR019
+U 1 1 5DDFC1A8
+P 5800 6350
+F 0 "#PWR019" H 5800 6200 50  0001 C CNN
+F 1 "+5V" H 5815 6523 50  0000 C CNN
+F 2 "" H 5800 6350 50  0001 C CNN
+F 3 "" H 5800 6350 50  0001 C CNN
+	1    5800 6350
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	1950 4900 2900 4900
+Wire Wire Line
+	2900 4900 2900 4700
+$Comp
+L power:+5V #PWR012
+U 1 1 5DE0195D
+P 2900 4700
+F 0 "#PWR012" H 2900 4550 50  0001 C CNN
+F 1 "+5V" H 2915 4873 50  0000 C CNN
+F 2 "" H 2900 4700 50  0001 C CNN
+F 3 "" H 2900 4700 50  0001 C CNN
+	1    2900 4700
+	1    0    0    -1  
+$EndComp
+$Comp
+L tom-passives:C C6
+U 1 1 5DE0C663
+P 5000 6700
+F 0 "C6" H 5115 6738 40  0000 L CNN
+F 1 "10uF" H 5115 6662 40  0000 L CNN
+F 2 "tom-passives:C_0805_2012Metric_Pad1.15x1.40mm_HandSolder" H 5038 6550 30  0001 C CNN
+F 3 "" H 5000 6700 60  0000 C CNN
+	1    5000 6700
+	1    0    0    -1  
+$EndComp
+$Comp
+L tom-passives:C C8
+U 1 1 5DE0DEE7
+P 5400 6700
+F 0 "C8" H 5515 6738 40  0000 L CNN
+F 1 "10uF" H 5515 6662 40  0000 L CNN
+F 2 "tom-passives:C_0805_2012Metric_Pad1.15x1.40mm_HandSolder" H 5438 6550 30  0001 C CNN
+F 3 "" H 5400 6700 60  0000 C CNN
+	1    5400 6700
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	5000 6400 5000 6500
+Connection ~ 5800 6400
+Wire Wire Line
+	5800 6400 5800 6350
+Wire Wire Line
+	5400 6500 5400 6400
+Wire Wire Line
+	5000 6400 5400 6400
+Connection ~ 5400 6400
+Wire Wire Line
+	5000 6900 5000 7000
+Connection ~ 5700 7000
+Wire Wire Line
+	5400 6900 5400 7000
+Wire Wire Line
+	5000 7000 5400 7000
+Connection ~ 5400 7000
+Wire Wire Line
+	5700 6900 5700 7000
+Wire Wire Line
+	5400 6400 5800 6400
+Wire Wire Line
+	5400 7000 5700 7000
 $EndSCHEMATC
