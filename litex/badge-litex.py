@@ -130,7 +130,7 @@ def main():
     
     builder = Builder(soc,
                       output_dir="build",
-                      csr_csv="build/csr.csv",
+                      csr_csv="csr.csv",
                       compile_software=True,
                       compile_gateware=True)
     for package in builder.software_packages:
