@@ -79,6 +79,6 @@ If you want to you can not load PMOD4 and add Hyperram.  It uses the same schema
 ### v1.2
 
 ![Top](image-v1.2-top.jpg)
-![Bottom](image-v1.2-top.jpg)
+![Bottom](image-v1.2-bottom.jpg)
 
 ![3d image](3d-view.png)
