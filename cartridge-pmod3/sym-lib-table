@@ -3,4 +3,5 @@
   (lib (name tom-mechanical)(type Legacy)(uri ${KIPRJMOD}/tom-kicad/symbols/tom-mechanical.lib)(options "")(descr ""))
   (lib (name tom-passives)(type Legacy)(uri ${KIPRJMOD}/tom-kicad/symbols/tom-passives.lib)(options "")(descr ""))
   (lib (name tom-semiconductors)(type Legacy)(uri ${KIPRJMOD}/tom-kicad/symbols/tom-semiconductors.lib)(options "")(descr ""))
+  (lib (name cartridge-rescue)(type Legacy)(uri ${KIPRJMOD}/cartridge-rescue.lib)(options "")(descr ""))
 )
